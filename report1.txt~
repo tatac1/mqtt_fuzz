@@ -1,0 +1,55 @@
+サーバーによってMQTTのコネクション(c1)が打ち切られると、mqtt_fuzz.pyは新しいコネクション(c2)をつくる。
+しかし、登録されていたPDUのシーケンスが終わるまでmqtt_fuzz.pyはc1用のPDUを投げ続ける。
+このとき、Twistedにより並列処理が行われている。
+
+ところが、コネクションの切れたTCPポートからconnect以外のPDUを投げても拒否されるのはわかっている。
+したがって、サーバーによってMQTTのコネクションが打ち切られた後は、古いシーケンスを破棄し、connectから始まる新しいセッションについて試行を開始すべきである。
+こうすることで並列処理をする必要がなくなる。
+並列処理はプログラムの挙動が複雑になるので、必要でなければ避けるべきである。
+
+ただし、もしも並列で攻撃を試行できるのであればそうするべきであるので、私は意味のある並列処理をさせたいと思う。
+
+administrator-no-MacBook-Pro:mqtt_fuzz tabata$ python mqtt_fuzz.py localhost 1883 -delay=10000
+1501808156:Starting fuzz run to localhost:1883
+1501808156:c9b3b00f-5665-42cf-a579-a550bac88f02:Connected to server
+1501808156:c9b3b00f-5665-42cf-a579-a550bac88f02:Sending fuzzed connect
+Fri Aug  4 00:55:56 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1501808156:c9b3b00f-5665-42cf-a579-a550bac88f02:Fuzzer -> Server: EBYABE3igIhRVFQEAgAA86CAqQAKbXljbGllbnRpZA==
+1501808156:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501808156:Reconnecting
+1501808156:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Connected to server
+1501808156:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Sending valid connect
+1501808156:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501808156:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Server -> Fuzzer: IAIAAA==
+
+1501808166:c9b3b00f-5665-42cf-a579-a550bac88f02:Sending valid disconnect
+1501808166:c9b3b00f-5665-42cf-a579-a550bac88f02:Fuzzer -> Server: 4AA=
+1501808166:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Sending valid subscribe
+1501808166:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501808166:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Server -> Fuzzer: kAMAAgI=
+
+1501808176:c9b3b00f-5665-42cf-a579-a550bac88f02:End of session, initiating disconnect.
+Closed the port for c9b3b00f-5665-42cf-a579-a550bac88f02
+1501808176:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Sending valid disconnect
+1501808176:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:Fuzzer -> Server: 4AA=
+1501808176:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501808176:Reconnecting
+1501808176:b73e689e-927d-4398-a87c-47111dc50f2c:Connected to server
+1501808176:b73e689e-927d-4398-a87c-47111dc50f2c:Sending valid connect
+1501808176:b73e689e-927d-4398-a87c-47111dc50f2c:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501808176:b73e689e-927d-4398-a87c-47111dc50f2c:Server -> Fuzzer: IAIAAA==
+
+1501808186:6323e0f1-41df-47ed-8a1c-b2338be7dfaf:End of session, initiating disconnect.
+Closed the port for 6323e0f1-41df-47ed-8a1c-b2338be7dfaf
+1501808186:b73e689e-927d-4398-a87c-47111dc50f2c:Sending valid subscribe
+1501808186:b73e689e-927d-4398-a87c-47111dc50f2c:Fuzzer -> Server: gggABwADKy8rAg==
+1501808186:b73e689e-927d-4398-a87c-47111dc50f2c:Server -> Fuzzer: kAMABwIzEAAHVG9waWMvQwABcW9zIDE=
+
+1501808196:b73e689e-927d-4398-a87c-47111dc50f2c:Sending valid publish
+1501808196:b73e689e-927d-4398-a87c-47111dc50f2c:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+^C1501808206:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+1501808206:Reconnecting
+1501808206:Stopped fuzz run to localhost:1883

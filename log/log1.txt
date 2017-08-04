@@ -1,0 +1,88 @@
+bash-3.2$ python mqtt_fuzz.py localhost 1883
+1501738045:Starting fuzz run to localhost:1883
+1501738045:80fac71d-4424-4a90-aa01-184c52f20074:Connected to server
+1501738045:80fac71d-4424-4a90-aa01-184c52f20074:Sending fuzzed connect
+Thu Aug  3 05:27:25 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1501738046:80fac71d-4424-4a90-aa01-184c52f20074:Fuzzer -> Server: EBYABE1RVAQCAFQEAgAACmlk
+1501738046:80fac71d-4424-4a90-aa01-184c52f20074:Sending valid disconnect
+1501738046:80fac71d-4424-4a90-aa01-184c52f20074:Fuzzer -> Server: 4AA=
+1501738046:80fac71d-4424-4a90-aa01-184c52f20074:End of session, initiating disconnect.
+1501738046:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501738046:Reconnecting
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Connected to server
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Sending valid connect
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Server -> Fuzzer: IAIAAA==
+
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Sending valid subscribe
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Server -> Fuzzer: kAMAAgI=
+
+1501738046:2aec960e-7b08-41f4-8a06-0654b9213b51:Sending fuzzed disconnect
+Thu Aug  3 05:27:26 2017:Generating 500 new fuzz cases for path 'valid-cases/disconnect'
+1501738047:2aec960e-7b08-41f4-8a06-0654b9213b51:Fuzzer -> Server: 4PvuKP8A
+1501738047:2aec960e-7b08-41f4-8a06-0654b9213b51:End of session, initiating disconnect.
+1501738047:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501738047:Reconnecting
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Connected to server
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Sending valid connect
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Server -> Fuzzer: IAIAAA==
+
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Sending valid subscribe
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Fuzzer -> Server: gggABwADKy8rAg==
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Server -> Fuzzer: kAMABwI=
+
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Sending valid publish
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Sending valid disconnect
+1501738047:f10fff3e-68df-4552-ba12-790a96435f18:Fuzzer -> Server: 4AA=
+1501738047:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501738047:Reconnecting
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Connected to server
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid connect
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1501738047:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501738047:Reconnecting
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Connected to server
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending fuzzed connect
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: AgICAgICAgICAgICAgICAgICAgICAg1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid subscribe
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: gggACgADKy8rAg==
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending valid publish
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid publish
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending fuzzed publish-release
+Thu Aug  3 05:27:27 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-release'
+1501738047:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: YvOggKoCAAg=
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid publish-ack
+1501738047:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: QAIAAQ==
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending valid subscribe
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: gggACwADKy8rAg==
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid publish-release
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: YgIABA==
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending valid publish-received
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: UAIAAg==
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid publish-complete
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: cAIAAg==
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending valid publish-ack
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: QAIAAg==
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending fuzzed publish-received
+Thu Aug  3 05:27:28 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-received'
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: UAIAEQE=
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Sending valid disconnect
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:Fuzzer -> Server: 4AA=
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending valid publish-complete
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: cAIAAQ==
+1501738048:9ed21162-b43d-42d0-bcd5-4dfd3dc24ae1:End of session, initiating disconnect.
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Sending fuzzed disconnect
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:Fuzzer -> Server: 86CA86CAC67gAA==
+1501738048:f9391996-2dc3-4aab-b638-d4bcc53765ce:End of session, initiating disconnect.
+  C-c C-c1501739137:Stopped fuzz run to localhost:1883
+bash-3.2$ exit
+
+Process shell finished

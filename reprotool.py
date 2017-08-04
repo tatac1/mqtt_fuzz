@@ -31,8 +31,8 @@ class MQTTFuzzProtocol(Protocol):
     # Raw MQTT messages to be played back, in base64.
     # This just connects and disconnects. Replace
     # this data with a list of data from the fuzzer logs.
-    session_data = ['EBYABE1RVFQEAAAAAApteWNsaWVudGlk',
-                    '4AA=']
+    session_data = [
+        'YgIABg==']
 
     current_session = iter(session_data)
 

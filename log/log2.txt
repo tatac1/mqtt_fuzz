@@ -1,0 +1,1148 @@
+1501752264:Starting fuzz run to localhost:1883
+1501752264:203fa333-5863-47b2-b9a0-1a93bd6c370d:Connected to server
+1501752264:203fa333-5863-47b2-b9a0-1a93bd6c370d:Sending valid connect
+1501752264:203fa333-5863-47b2-b9a0-1a93bd6c370d:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752264:203fa333-5863-47b2-b9a0-1a93bd6c370d:Server -> Fuzzer: IAIAAA==
+
+1501752265:203fa333-5863-47b2-b9a0-1a93bd6c370d:Sending valid disconnect
+1501752265:203fa333-5863-47b2-b9a0-1a93bd6c370d:Fuzzer -> Server: 4AA=
+1501752265:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752265:Reconnecting
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Connected to server
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Sending valid connect
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Server -> Fuzzer: IAIAAA==
+
+1501752265:203fa333-5863-47b2-b9a0-1a93bd6c370d:End of session, initiating disconnect.
+Closed the port for 203fa333-5863-47b2-b9a0-1a93bd6c370d
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Sending valid subscribe
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Server -> Fuzzer: kAMAAgI=
+
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Sending valid disconnect
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:Fuzzer -> Server: 4AA=
+1501752265:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752265:Reconnecting
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Connected to server
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Sending valid connect
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1501752265:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752265:Reconnecting
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Connected to server
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid connect
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Server -> Fuzzer: IAIAAA==
+
+1501752265:5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5:End of session, initiating disconnect.
+Closed the port for 5fa8e6e7-e8e8-42f1-9acd-de61bc527ef5
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Sending valid subscribe
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Fuzzer -> Server: gggABwADKy8rAg==
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid subscribe
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: gggACgADKy8rAg==
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Server -> Fuzzer: kAMACgI=
+
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Sending valid publish
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid publish
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Server -> Fuzzer: QAIAAw==
+
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Sending valid disconnect
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:Fuzzer -> Server: 4AA=
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid publish-ack
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: QAIAAQ==
+1501752265:8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59:End of session, initiating disconnect.
+Closed the port for 8fc9dc12-3c7c-4c8e-bd3b-abc5c88cbf59
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid publish-release
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: YgIABA==
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Server -> Fuzzer: cAIABA==
+
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending fuzzed publish-complete
+Thu Aug  3 09:24:25 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-complete'
+1501752265:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: 
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid publish-received
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: UAIAAg==
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Server -> Fuzzer: YgIAAg==
+
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid publish-complete
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: cAIAAg==
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Sending valid disconnect
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:Fuzzer -> Server: 4AA=
+1501752266:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752266:Reconnecting
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Connected to server
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Sending valid connect
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Server -> Fuzzer: IAIAAA==
+
+1501752266:f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9:End of session, initiating disconnect.
+Closed the port for f05291ff-6b0e-43f5-9cd9-f9e5eccc94d9
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Sending valid publish
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Server -> Fuzzer: UAIABA==
+
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Sending valid publish-release
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: YgIABg==
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Server -> Fuzzer: cAIABg==
+
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Sending valid subscribe
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: gggACwADKy8rAg==
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Server -> Fuzzer: kAMACwI=
+
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Sending fuzzed publish-received
+Thu Aug  3 09:24:26 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-received'
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: CPOggLoCAIE=
+1501752266:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752266:Reconnecting
+1501752266:243d703b-7b98-46b8-ac75-92a0ea10f8e3:Connected to server
+1501752266:243d703b-7b98-46b8-ac75-92a0ea10f8e3:Sending valid connect
+1501752266:243d703b-7b98-46b8-ac75-92a0ea10f8e3:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1501752266:243d703b-7b98-46b8-ac75-92a0ea10f8e3:Server -> Fuzzer: IAIAAA==
+
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Sending valid publish-ack
+1501752266:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: QAIAAg==
+1501752266:243d703b-7b98-46b8-ac75-92a0ea10f8e3:Sending valid disconnect
+1501752266:243d703b-7b98-46b8-ac75-92a0ea10f8e3:Fuzzer -> Server: 4AA=
+1501752266:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752266:Reconnecting
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Connected to server
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Sending valid connect
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Server -> Fuzzer: IAIAAA==
+
+1501752267:96bdf7f7-1367-4511-adae-3057939e9d11:Sending valid disconnect
+1501752267:96bdf7f7-1367-4511-adae-3057939e9d11:Fuzzer -> Server: 4AA=
+1501752267:243d703b-7b98-46b8-ac75-92a0ea10f8e3:End of session, initiating disconnect.
+Closed the port for 243d703b-7b98-46b8-ac75-92a0ea10f8e3
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Sending valid subscribe
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Fuzzer -> Server: ggwABAAHVG9waWMvQwI=
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Server -> Fuzzer: kAMABAI=
+
+1501752267:96bdf7f7-1367-4511-adae-3057939e9d11:End of session, initiating disconnect.
+Closed the port for 96bdf7f7-1367-4511-adae-3057939e9d11
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Sending valid disconnect
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:Fuzzer -> Server: 4AA=
+1501752267:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752267:Reconnecting
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Connected to server
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Sending valid connect
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Server -> Fuzzer: IAIBAA==
+
+1501752267:71758a81-6b51-4d4b-92b5-3a875ecf0627:End of session, initiating disconnect.
+Closed the port for 71758a81-6b51-4d4b-92b5-3a875ecf0627
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Sending valid subscribe
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Fuzzer -> Server: ghgADAAIVG9waWNBLyMCAAhUb3BpY0EvKwE=
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Server -> Fuzzer: kAQADAIB
+
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Sending valid publish
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Fuzzer -> Server: MQ8ACFRvcGljQS9CcW9zIDA=
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Server -> Fuzzer: MA8ACFRvcGljQS9CcW9zIDA=
+
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Sending fuzzed disconnect
+Thu Aug  3 09:24:27 2017:Generating 500 new fuzz cases for path 'valid-cases/disconnect'
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:Fuzzer -> Server: 86CBoOHiAAD//4CDoI7zKy92OTIyMzM3MjAzNjg1NDc376O/NTgxN6CBpeAA
+1501752267:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752267:Reconnecting
+1501752267:7ab95f4b-0446-411c-a6c9-0688b01d934e:Connected to server
+1501752267:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid connect
+1501752267:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: EDgABE1RVFQEFgACAApteWNsaWVudGlkAAdUb3BpYy9DABdjbGllbnQgbm90IGRpc2Nvbm5lY3RlZA==
+1501752267:7ab95f4b-0446-411c-a6c9-0688b01d934e:Server -> Fuzzer: IAIAAA==
+
+1501752267:5f1c3826-c031-4a1c-9499-cb9228135a9c:End of session, initiating disconnect.
+Closed the port for 5f1c3826-c031-4a1c-9499-cb9228135a9c
+1501752267:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending fuzzed subscribe
+Thu Aug  3 09:24:27 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1501752268:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: ghgADAAIVG9waWNBLyMCAAhUb3BpY0EvIwIACFRvcGljQS8jAgAIVG9waWNBL8CrAQ==
+1501752268:7ab95f4b-0446-411c-a6c9-0688b01d934e:Server -> Fuzzer: kAQADAICMQ8ACFRvcGljQS9CcW9zIDAxDwAIVG9waWNBL0Jxb3MgMA==
+
+1501752268:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752268:Reconnecting
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Connected to server
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Sending valid connect
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Server -> Fuzzer: IAIAAA==
+
+1501752268:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid publish
+1501752268:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: MxAAB1RvcGljL0MABXFvcyAx
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Sending valid publish
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: NREACFRvcGljQS9DAAZxb3MgMg==
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Server -> Fuzzer: UAIABg==
+
+1501752268:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending fuzzed publish-ack
+Thu Aug  3 09:24:28 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-ack'
+1501752268:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: AAJAAQ==
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Sending valid publish-release
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: YgIACQ==
+1501752268:9636f283-014d-4d75-bf3e-657eed8ad593:Server -> Fuzzer: cAIACQ==
+
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid publish-release
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: YgIAAw==
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Sending fuzzed subscribe
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: ggfAgMCHAAMrL0MC
+1501752269:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752269:Reconnecting
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:Connected to server
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:Sending valid connect
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:Server -> Fuzzer: IAIAAA==
+
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid publish-complete
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: cAIAAQ==
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Sending fuzzed publish-received
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: UO+94oCBsAIA86CBlisvdisB
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:Sending valid disconnect
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:Fuzzer -> Server: 4AA=
+1501752269:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752269:Reconnecting
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Connected to server
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Sending valid connect
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Fuzzer -> Server: EDEABE1RVFQEFgAFAApteWNsaWVudGlkAAcvVG9waWNBABBrZWVwYWxpdmUgZXhwaXJ5
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Server -> Fuzzer: IAIAAA==
+
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid publish-received
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: UAIAAQ==
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Sending valid publish-ack
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: QAIAAQ==
+1501752269:5b725ec9-f4a6-4101-8213-8ee3b93e1123:End of session, initiating disconnect.
+Closed the port for 5b725ec9-f4a6-4101-8213-8ee3b93e1123
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Sending valid subscribe
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Fuzzer -> Server: ggwABQAHL1RvcGljQQI=
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Server -> Fuzzer: kAMABQI=
+
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid publish-complete
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: cAIAAg==
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Sending valid disconnect
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:Fuzzer -> Server: 4AA=
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Sending valid disconnect
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:Fuzzer -> Server: 4AA=
+1501752269:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752269:Reconnecting
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Connected to server
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Sending valid connect
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Server -> Fuzzer: IAIAAA==
+
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Sending valid disconnect
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:Fuzzer -> Server: 4AA=
+1501752269:9636f283-014d-4d75-bf3e-657eed8ad593:End of session, initiating disconnect.
+Closed the port for 9636f283-014d-4d75-bf3e-657eed8ad593
+1501752269:a6d009a0-91b5-4b54-8936-0040b947ed08:End of session, initiating disconnect.
+Closed the port for a6d009a0-91b5-4b54-8936-0040b947ed08
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Sending valid subscribe
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Fuzzer -> Server: gg0ABgAIVG9waWNBLyMC
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Server -> Fuzzer: kAMABgIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1501752269:7ab95f4b-0446-411c-a6c9-0688b01d934e:End of session, initiating disconnect.
+Closed the port for 7ab95f4b-0446-411c-a6c9-0688b01d934e
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Sending valid publish
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Fuzzer -> Server: MQoACFRvcGljQS9C
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Server -> Fuzzer: MAoACFRvcGljQS9C
+
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Sending valid disconnect
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:Fuzzer -> Server: 4AA=
+1501752269:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752269:Reconnecting
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Connected to server
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid connect
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Server -> Fuzzer: IAIAAA==
+
+1501752269:fa5f765d-422f-4b1d-8ff8-95bc9213c228:End of session, initiating disconnect.
+Closed the port for fa5f765d-422f-4b1d-8ff8-95bc9213c228
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid subscribe
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: ggYAAgABIwA=
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Server -> Fuzzer: kAMAAgA=
+
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid publish
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: MwsAB1RvcGljL0MACA==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Server -> Fuzzer: QAIACDAJAAdUb3BpYy9D
+
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid publish-ack
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: QAIAAQ==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid publish-release
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: YgIADQ==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Server -> Fuzzer: cAIADQ==
+
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid publish-complete
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: cAIAAQ==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid publish-received
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: UAIAAg==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Server -> Fuzzer: YgIAAg==
+
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid publish-complete
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: cAIAAQ==
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Sending valid disconnect
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:Fuzzer -> Server: 4AA=
+1501752269:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752269:Reconnecting
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Connected to server
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid connect
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Server -> Fuzzer: IAIBAA==
+
+1501752269:22205b89-d828-4670-89d3-19aa5bcd8cdb:End of session, initiating disconnect.
+Closed the port for 22205b89-d828-4670-89d3-19aa5bcd8cdb
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid publish
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: NQwACFRvcGljQS9DAAk=
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Server -> Fuzzer: UAIACQ==
+
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid publish-release
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: YgIACA==
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Server -> Fuzzer: cAIACA==
+
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid subscribe
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501752269:02da757d-592e-4da7-92ef-bb43b035080c:Server -> Fuzzer: kAMAAgI=
+
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid publish-received
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: UAIAAQ==
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Server -> Fuzzer: YgIAAQ==
+
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid publish-ack
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: QAIAAQ==
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Sending valid disconnect
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:Fuzzer -> Server: 4AA=
+1501752270:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752270:Reconnecting
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:Connected to server
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:Sending valid connect
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:Server -> Fuzzer: IAIAAA==
+
+1501752270:02da757d-592e-4da7-92ef-bb43b035080c:End of session, initiating disconnect.
+Closed the port for 02da757d-592e-4da7-92ef-bb43b035080c
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:Sending valid disconnect
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:Fuzzer -> Server: 4AA=
+1501752270:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752270:Reconnecting
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Connected to server
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Sending valid connect
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Fuzzer -> Server: EBoABE1RVFQEAgAAAA5jbGVhbiByZXRhaW5lZA==
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Server -> Fuzzer: IAIAAA==
+
+1501752270:4817181a-11bb-4a11-aee9-3311cd75c675:End of session, initiating disconnect.
+Closed the port for 4817181a-11bb-4a11-aee9-3311cd75c675
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Sending valid subscribe
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Fuzzer -> Server: gggABwADKy8rAg==
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Server -> Fuzzer: kAMABwI=
+
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Sending valid disconnect
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:Fuzzer -> Server: 4AA=
+1501752270:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752270:Reconnecting
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Connected to server
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Sending valid connect
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Server -> Fuzzer: IAIAAA==
+
+1501752270:50143ba5-efde-4a31-940e-f8f7e95d264f:End of session, initiating disconnect.
+Closed the port for 50143ba5-efde-4a31-940e-f8f7e95d264f
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Sending valid subscribe
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Fuzzer -> Server: gggACgADKy8rAg==
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Server -> Fuzzer: kAMACgI=
+
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Sending valid publish
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Fuzzer -> Server: MA8ACFRvcGljQS9CcW9zIDA=
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Server -> Fuzzer: MA8ACFRvcGljQS9CcW9zIDA=
+
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Sending valid disconnect
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:Fuzzer -> Server: 4AA=
+1501752270:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752270:Reconnecting
+1501752270:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Connected to server
+1501752270:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending fuzzed connect
+Thu Aug  3 09:24:30 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1501752270:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: EBYABE1R86CAsVTwkICAVAQCAAAACm15Y2xpZW50aWQ=
+1501752270:6cce442c-3cb3-4f1c-8b06-80df9e75ee54:End of session, initiating disconnect.
+Closed the port for 6cce442c-3cb3-4f1c-8b06-80df9e75ee54
+1501752270:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752270:Reconnecting
+1501752270:f5010cc6-fba5-44d4-b165-4c450158957c:Connected to server
+1501752270:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid connect
+1501752270:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752270:f5010cc6-fba5-44d4-b165-4c450158957c:Server -> Fuzzer: IAIAAA==
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid subscribe
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: gggACwADKy8rAg==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid publish
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: MhAAB1RvcGljL0MAAnFvcyAx
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Server -> Fuzzer: QAIAAg==
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid publish
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: NBEACFRvcGljQS9DAANxb3MgMg==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid publish-release
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: YgIABA==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Server -> Fuzzer: cAIABA==
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid publish-ack
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: QAIAAg==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid subscribe
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: ggwABAAHVG9waWMvQwI=
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Server -> Fuzzer: kAMABAI=
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid publish-release
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: YgIABg==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid publish-received
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: UAIAAQ==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Server -> Fuzzer: YgIAAQ==
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid publish-complete
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: cAIAAQ==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid publish-ack
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: QAIAAQ==
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending fuzzed publish-received
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: UAICAgLAgEg=
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Sending valid disconnect
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:Fuzzer -> Server: 4AA=
+1501752271:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752271:Reconnecting
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:Connected to server
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:Sending valid connect
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:Server -> Fuzzer: IAIAAA==
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid publish-complete
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: cAIAAg==
+1501752271:f5010cc6-fba5-44d4-b165-4c450158957c:End of session, initiating disconnect.
+Closed the port for f5010cc6-fba5-44d4-b165-4c450158957c
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:Sending valid disconnect
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:Fuzzer -> Server: 4AA=
+1501752271:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752271:Reconnecting
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Connected to server
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Sending valid connect
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Server -> Fuzzer: IAIAAA==
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Sending valid disconnect
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:Fuzzer -> Server: 4AA=
+1501752271:239fb5da-346e-463e-b94d-3f8ab4d01faa:End of session, initiating disconnect.
+Closed the port for 239fb5da-346e-463e-b94d-3f8ab4d01faa
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Sending valid subscribe
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Fuzzer -> Server: ghgADAAIVG9waWNBLyMCAAhUb3BpY0EvKwE=
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Server -> Fuzzer: kAQADAIB
+
+1501752271:f98cbb41-b3d0-49c9-a515-b8bf0b4857fc:End of session, initiating disconnect.
+Closed the port for f98cbb41-b3d0-49c9-a515-b8bf0b4857fc
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Sending valid disconnect
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:Fuzzer -> Server: 4AA=
+1501752271:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752271:Reconnecting
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Connected to server
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Sending fuzzed connect
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Fuzzer -> Server: EOKBnxcABE1RVFQEAAAAAAtteWRsZWFuICByZXRhaQ7+/25lZA==
+1501752271:f6ab1706-333d-428f-b6df-42f819e6daf4:End of session, initiating disconnect.
+Closed the port for f6ab1706-333d-428f-b6df-42f819e6daf4
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Sending fuzzed subscribe
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Fuzzer -> Server: ggwABAAHqy/hvvOggLiC86CBqSsrKyvAqwICAgICAgICAgIC86CBqAICwOKAjYICAgICAvOggagCAsCCAgIC
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Sending valid publish
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Fuzzer -> Server: NCUACFRvcGljQS9DAA1vdmVybGFwcGluZyB0b3BpYyBmaWx0ZXJz
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Sending valid disconnect
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:Fuzzer -> Server: 4AA=
+1501752271:7f2522c4-34b0-4f70-9651-08e64b06487d:End of session, initiating disconnect.
+Closed the port for 7f2522c4-34b0-4f70-9651-08e64b06487d
+1501752271:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752271:Reconnecting
+1501752271:a8895508-f408-43e3-b156-546174f4abbe:Connected to server
+1501752271:a8895508-f408-43e3-b156-546174f4abbe:Sending fuzzed connect
+1501752271:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: EBYABE1RVFTzoIC8BAIAAAAKbXljbGllbnRpZA==
+1501752271:a8895508-f408-43e3-b156-546174f4abbe:Server -> Fuzzer: IAIAAQ==
+
+1501752271:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752271:Reconnecting
+1501752271:fca1b45a-6102-4908-ba59-9f1a9b789267:Connected to server
+1501752271:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending valid connect
+1501752271:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752271:fca1b45a-6102-4908-ba59-9f1a9b789267:Server -> Fuzzer: IAIAAA==
+
+1501752271:a8895508-f408-43e3-b156-546174f4abbe:Sending valid subscribe
+1501752271:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: ggwABQAHL1RvcGljQQI=
+1501752271:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending fuzzed publish
+Thu Aug  3 09:24:31 2017:Generating 500 new fuzz cases for path 'valid-cases/publish'
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: MzQwMjgyMzY2OTIwOTM4NDYzNDYzMzc0NjA3NDMxNzY4MjExNDU3DwAGVG9waWNBAANxb3MgMQ==
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Sending fuzzed publish
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: MTI4JQAIVG9waWNBL0MADW92ZXJsYXBwaW5nIHRvcGljIGZpbHRlcnM=
+1501752272:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752272:Reconnecting
+1501752272:bccb60ac-cad4-4809-97cd-65e89d8d9b2f:Connected to server
+1501752272:bccb60ac-cad4-4809-97cd-65e89d8d9b2f:Sending valid connect
+1501752272:bccb60ac-cad4-4809-97cd-65e89d8d9b2f:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1501752272:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752272:Reconnecting
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Connected to server
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Sending valid connect
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Server -> Fuzzer: IAIAAA==
+
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending valid publish-release
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: YgIACQ==
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Sending valid publish-ack
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: QAIAAQ==
+1501752272:bccb60ac-cad4-4809-97cd-65e89d8d9b2f:Sending valid disconnect
+1501752272:bccb60ac-cad4-4809-97cd-65e89d8d9b2f:Fuzzer -> Server: 4AA=
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Sending valid subscribe
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Fuzzer -> Server: gg0ABgAIVG9waWNBLyMC
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Server -> Fuzzer: kAMABgI=
+
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending valid subscribe
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: ggYAAgABIwA=
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Sending fuzzed publish-release
+Thu Aug  3 09:24:32 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-release'
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: YmJiAmICAA0=
+1501752272:bccb60ac-cad4-4809-97cd-65e89d8d9b2f:End of session, initiating disconnect.
+Closed the port for bccb60ac-cad4-4809-97cd-65e89d8d9b2f
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Sending fuzzed disconnect
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:Fuzzer -> Server: gfOggKbzoIHvu77zoIGOgA==
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending valid publish-received
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: UAIAAQ==
+1501752272:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752272:Reconnecting
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Connected to server
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Sending valid connect
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Server -> Fuzzer: IAIAAA==
+
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Sending valid publish-complete
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: cAIAAg==
+1501752272:2893f12d-e1e8-4de6-87a0-3cd80c405955:End of session, initiating disconnect.
+Closed the port for 2893f12d-e1e8-4de6-87a0-3cd80c405955
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending valid publish-ack
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: QAIAAQ==
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Sending valid subscribe
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Server -> Fuzzer: kAMAAgI=
+
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Sending valid publish-received
+1501752272:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: UAIAAg==
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Sending valid disconnect
+1501752272:fca1b45a-6102-4908-ba59-9f1a9b789267:Fuzzer -> Server: 4AA=
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Sending valid publish
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Fuzzer -> Server: MgwACFRvcGljQS9CAAc=
+1501752272:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Server -> Fuzzer: QAIABw==
+
+1501752273:a8895508-f408-43e3-b156-546174f4abbe:Sending valid publish-complete
+1501752273:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: cAIAAQ==
+1501752273:fca1b45a-6102-4908-ba59-9f1a9b789267:End of session, initiating disconnect.
+Closed the port for fca1b45a-6102-4908-ba59-9f1a9b789267
+1501752273:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Sending valid disconnect
+1501752273:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:Fuzzer -> Server: 4AA=
+1501752273:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752273:Reconnecting
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Connected to server
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid connect
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Server -> Fuzzer: IAIAAA==
+
+1501752273:a8895508-f408-43e3-b156-546174f4abbe:Sending valid disconnect
+1501752273:a8895508-f408-43e3-b156-546174f4abbe:Fuzzer -> Server: 4AA=
+1501752273:3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5:End of session, initiating disconnect.
+Closed the port for 3cfd3ee6-ff8c-485c-95f1-d32ad3a3e9f5
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid subscribe
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: gggABwADKy8rAg==
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Server -> Fuzzer: kAMABwI=
+
+1501752273:a8895508-f408-43e3-b156-546174f4abbe:End of session, initiating disconnect.
+Closed the port for a8895508-f408-43e3-b156-546174f4abbe
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid publish
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: NAwACFRvcGljQS9DAAg=
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Server -> Fuzzer: UAIACA==
+
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid publish-ack
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: QAIAAg==
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid publish-release
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: YgIAAw==
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Server -> Fuzzer: cAIAAw==
+
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid publish-complete
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: cAIAAg==
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid publish-received
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: UAIAAg==
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Server -> Fuzzer: YgIAAg==
+
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid publish-complete
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: cAIAAQ==
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Sending valid disconnect
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:Fuzzer -> Server: 4AA=
+1501752273:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752273:Reconnecting
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Connected to server
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending valid connect
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Server -> Fuzzer: IAIAAA==
+
+1501752273:5f9e385d-a1c3-4e31-83ac-5dd5fce0848d:End of session, initiating disconnect.
+Closed the port for 5f9e385d-a1c3-4e31-83ac-5dd5fce0848d
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending fuzzed publish
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: OTIyMzM3MjAzNjg1NDc3NTgwNwwACFRvcGljQS9DAAg=
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending valid publish-release
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: YgIADQ==
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending valid subscribe
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: gggACgADKy8rAg==
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending fuzzed publish-received
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: UIMAAg==
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending valid publish-ack
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: QAIAAQ==
+1501752273:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752273:Reconnecting
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:Connected to server
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:Sending valid connect
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:Server -> Fuzzer: IAIBAA==
+
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Sending fuzzed disconnect
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:Fuzzer -> Server: 4IDgAA==
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:Sending valid disconnect
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:Fuzzer -> Server: 4AA=
+1501752273:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752273:Reconnecting
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Connected to server
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Sending valid connect
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Fuzzer -> Server: EDgABE1RVFQEFgACAApteWNsaWVudGlkAAdUb3BpYy9DABdjbGllbnQgbm90IGRpc2Nvbm5lY3RlZA==
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Server -> Fuzzer: IAIAAA==
+
+1501752273:04e80403-0af0-4662-9fef-8cb8c037595d:End of session, initiating disconnect.
+Closed the port for 04e80403-0af0-4662-9fef-8cb8c037595d
+1501752273:687eb387-5cd8-48b3-874e-7bbf6d37baf5:End of session, initiating disconnect.
+Closed the port for 687eb387-5cd8-48b3-874e-7bbf6d37baf5
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Sending valid subscribe
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Fuzzer -> Server: gggACwADKy8rAg==
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Server -> Fuzzer: kAMACwI=
+
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Sending valid disconnect
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:Fuzzer -> Server: 4AA=
+1501752273:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752273:Reconnecting
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Connected to server
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Sending valid connect
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Server -> Fuzzer: IAIAAA==
+
+1501752273:3b1fbe60-a1d0-47b7-92e5-b4dfb569b955:End of session, initiating disconnect.
+Closed the port for 3b1fbe60-a1d0-47b7-92e5-b4dfb569b955
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Sending valid subscribe
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Fuzzer -> Server: ggwABAAHVG9waWMvQwI=
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Server -> Fuzzer: kAMABAI=
+
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Sending valid publish
+1501752273:88cc2745-8032-42b8-aefb-80fb68fbdadd:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1501752274:88cc2745-8032-42b8-aefb-80fb68fbdadd:Sending valid disconnect
+1501752274:88cc2745-8032-42b8-aefb-80fb68fbdadd:Fuzzer -> Server: 4AA=
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Connected to server
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid connect
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Server -> Fuzzer: IAIAAA==
+
+1501752274:88cc2745-8032-42b8-aefb-80fb68fbdadd:End of session, initiating disconnect.
+Closed the port for 88cc2745-8032-42b8-aefb-80fb68fbdadd
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid subscribe
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: ghgADAAIVG9waWNBLyMCAAhUb3BpY0EvKwE=
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Server -> Fuzzer: kAQADAIB
+
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid publish
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Server -> Fuzzer: QAIAAzIPAAZUb3BpY0EAAXFvcyAx
+
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid publish-ack
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: QAIAAQ==
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid publish-release
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: YgIACA==
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Server -> Fuzzer: cAIACA==
+
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid publish-complete
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: cAIAAQ==
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending fuzzed publish-received
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: UMCCPlDAgj5QwII+UMCCPlDAgj5QwII+UMCCPlDAgj5QwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCCPlDAgj5QwII+UMCCPls=
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending valid publish-complete
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: cAIAAQ==
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Sending fuzzed disconnect
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:Fuzzer -> Server: 4ADzAL0A
+1501752274:ce8fa2af-ae60-4376-a4e8-a8e4808b30d1:End of session, initiating disconnect.
+Closed the port for ce8fa2af-ae60-4376-a4e8-a8e4808b30d1
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Connected to server
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending valid connect
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: EDEABE1RVFQEFgAFAApteWNsaWVudGlkAAcvVG9waWNBABBrZWVwYWxpdmUgZXhwaXJ5
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Server -> Fuzzer: IAIAAA==
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending fuzzed publish
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: MTcwMTQxMTgzNDYwNDY5MjMxNzMxNjg3MzAzNzE1ODg0MTA1NzI4DQAGVG9waWNBcW9zIC0wNjk0MDQ2MzkNAAZUb3BpY0Fxb3MgLTA=
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:Connected to server
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:Sending valid connect
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:Server -> Fuzzer: IAIAAA==
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending fuzzed publish-release
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: wAAD
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:Sending valid disconnect
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:Fuzzer -> Server: 4AA=
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Connected to server
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Sending valid connect
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Server -> Fuzzer: IAIAAA==
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending fuzzed subscribe
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: gg0A4LmABgAIVG9vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb3Bp772vY2PguYFBLyMC
+1501752274:29d9fbd9-fd0a-408a-aeb8-d18055849f05:End of session, initiating disconnect.
+Closed the port for 29d9fbd9-fd0a-408a-aeb8-d18055849f05
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Sending valid subscribe
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Fuzzer -> Server: ggwABQAHL1RvcGljQQI=
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Server -> Fuzzer: kAMABQI=
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending valid publish-received
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: UAIAAQ==
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Sending valid disconnect
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:Fuzzer -> Server: 4AA=
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Connected to server
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Sending valid connect
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Server -> Fuzzer: IAIBAA==
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending valid publish-ack
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: QAIAAQ==
+1501752274:17bd6134-ee2a-42b4-af94-1cd4c5756490:End of session, initiating disconnect.
+Closed the port for 17bd6134-ee2a-42b4-af94-1cd4c5756490
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Sending valid subscribe
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Fuzzer -> Server: gg0ABgAIVG9waWNBLyMC
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Server -> Fuzzer: kAMABgI=
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Sending fuzzed disconnect
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:Fuzzer -> Server: AAAA
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Sending valid publish
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Server -> Fuzzer: UAIABA==
+
+1501752274:fc0cdbb6-f066-4a62-bc0e-2098ecea1882:End of session, initiating disconnect.
+Closed the port for fc0cdbb6-f066-4a62-bc0e-2098ecea1882
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Sending valid disconnect
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:Fuzzer -> Server: 4AA=
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Connected to server
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending valid connect
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Server -> Fuzzer: IAIAAA==
+
+1501752274:f67308f2-cf63-498f-be38-905fcd902795:End of session, initiating disconnect.
+Closed the port for f67308f2-cf63-498f-be38-905fcd902795
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending fuzzed subscribe
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: ggsAAgAGVG9w4LmDaWNBAg==
+1501752274:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752274:Reconnecting
+1501752274:4f7706a7-4515-4c46-9568-b97706fc1aab:Connected to server
+1501752274:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending valid connect
+1501752274:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: EBoABE1RVFQEAgAAAA5jbGVhbiByZXRhaW5lZA==
+1501752274:4f7706a7-4515-4c46-9568-b97706fc1aab:Server -> Fuzzer: IAIAAA==
+
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending valid publish
+1501752274:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: MQ8ACFRvcGljQS9CcW9zIDA=
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending valid publish
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: MxAAB1RvcGljL0MABXFvcyAx
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Server -> Fuzzer: QAIABQ==
+
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending valid publish-ack
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: QAIAAg==
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending valid publish-release
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: YgIABA==
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Server -> Fuzzer: cAIABA==
+
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending valid publish-release
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: YgIABg==
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending valid subscribe
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: ggYAAgABIwA=
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Server -> Fuzzer: kAMAAgAxDgAHVG9waWMvQ3FvcyAx
+
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending valid publish-complete
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: cAIAAg==
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending fuzzed publish-received
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: KVBQUFBQUALAgMCB
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending valid publish-received
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: UAIAAg==
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending valid publish-ack
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: QAIAAQ==
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending fuzzed publish-complete
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: tfOggb0C86CA7bqtu2AB
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Sending valid disconnect
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:Fuzzer -> Server: 4AA=
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Sending fuzzed disconnect
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:Fuzzer -> Server: 86CBoIG24A==
+1501752275:4f7706a7-4515-4c46-9568-b97706fc1aab:End of session, initiating disconnect.
+Closed the port for 4f7706a7-4515-4c46-9568-b97706fc1aab
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:Connected to server
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:Sending valid connect
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:Server -> Fuzzer: IAIAAA==
+
+1501752275:e13aec0a-cb46-490b-a69f-97c068a0b32f:End of session, initiating disconnect.
+Closed the port for e13aec0a-cb46-490b-a69f-97c068a0b32f
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:Sending valid disconnect
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:Fuzzer -> Server: 4AA=
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Connected to server
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Sending valid connect
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Server -> Fuzzer: IAIAAA==
+
+1501752275:991903a6-05de-4cd2-bb83-fa4ee1144755:End of session, initiating disconnect.
+Closed the port for 991903a6-05de-4cd2-bb83-fa4ee1144755
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Sending valid subscribe
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Server -> Fuzzer: kAMAAgI=
+
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Sending valid disconnect
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:Fuzzer -> Server: 4AA=
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Connected to server
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Sending fuzzed connect
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Fuzzer -> Server: EBoABE1RVFQEAgAAAA5jbGVhbiByZXRhacKgbmVk
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Server -> Fuzzer: IAIAAA==
+
+1501752275:777a0650-2113-4eeb-a12d-fb6acf8a05b3:End of session, initiating disconnect.
+Closed the port for 777a0650-2113-4eeb-a12d-fb6acf8a05b3
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Sending valid subscribe
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Fuzzer -> Server: gggABwADKy8rAg==
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Sending valid publish
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Fuzzer -> Server: NREACFRvcGljQS9DAAZxb3MgMg==
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Sending valid disconnect
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:Fuzzer -> Server: 4AA=
+1501752275:39c1045a-6664-4f5c-9a25-e4468809299b:End of session, initiating disconnect.
+Closed the port for 39c1045a-6664-4f5c-9a25-e4468809299b
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Connected to server
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid connect
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Server -> Fuzzer: IAIAAA==
+
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending fuzzed subscribe
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: ghgADAAI//4ABlRvcGlDQQI=
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid publish
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: MQoACFRvcGljQS9C
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Connected to server
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Sending fuzzed connect
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: EBYABKBNUVRUBACybXnzoICwY2xpZW5086CBlS0xODE5Njc0MzA0MjY2MjY3NTM2MTcyM2lk
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:Connected to server
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:Sending valid connect
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:Server -> Fuzzer: IAIAAA==
+
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid publish-ack
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: QAIAAQ==
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Sending fuzzed publish
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: MA3zoIG+VG9waWNBL0Jxb3MgMA==
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:Sending fuzzed disconnect
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:Fuzzer -> Server: oIEA
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid publish-release
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: YgIACQ==
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Sending valid publish-release
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: YgIAAw==
+1501752275:ebf43bd1-3cfd-4100-9a99-d56e445aee5a:End of session, initiating disconnect.
+Closed the port for ebf43bd1-3cfd-4100-9a99-d56e445aee5a
+1501752275:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752275:Reconnecting
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Connected to server
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Sending valid connect
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Server -> Fuzzer: IAIAAA==
+
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid publish-complete
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: cAIAAg==
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Sending valid subscribe
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: gggACgADKy8rAg==
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Sending valid subscribe
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Fuzzer -> Server: gggACwADKy8rAg==
+1501752275:1290c842-b37c-43f7-bfbd-665ce066557e:Server -> Fuzzer: kAMACwIzEAAHVG9waWMvQwABcW9zIDE=
+
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid publish-received
+1501752275:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: UAIAAQ==
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Sending valid publish-received
+1501752275:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: UAIAAQ==
+1501752276:1290c842-b37c-43f7-bfbd-665ce066557e:Sending valid disconnect
+1501752276:1290c842-b37c-43f7-bfbd-665ce066557e:Fuzzer -> Server: 4AA=
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Connected to server
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Sending valid connect
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Connected to server
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending valid connect
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Server -> Fuzzer: IAIAAA==
+
+1501752276:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending fuzzed publish-complete
+1501752276:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: cAJwAnACAALzoIEAAAAC86CBgb+w
+1501752276:060f22e1-1a31-4862-9049-118ebc21282e:Sending valid publish-ack
+1501752276:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: QAIAAQ==
+1501752276:1290c842-b37c-43f7-bfbd-665ce066557e:End of session, initiating disconnect.
+Closed the port for 1290c842-b37c-43f7-bfbd-665ce066557e
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Sending valid subscribe
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Fuzzer -> Server: ggwABAAHVG9waWMvQwI=
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending fuzzed subscribe
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: goKCgoKCgoKCgoIIAAqAoSPigaUC
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Connected to server
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending valid connect
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Server -> Fuzzer: IAIAAA==
+
+1501752276:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Sending valid disconnect
+1501752276:ea00c47b-05b3-401f-b46a-a9a3e6533ace:Fuzzer -> Server: 4AA=
+1501752276:060f22e1-1a31-4862-9049-118ebc21282e:Sending valid disconnect
+1501752276:060f22e1-1a31-4862-9049-118ebc21282e:Fuzzer -> Server: 4AA=
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Sending valid publish
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Fuzzer -> Server: MwsAB1RvcGljL0MACA==
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending fuzzed publish
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: LTHi86CBpYCrMjI1ODjigIQ2NzI5y5A14oCuMjc2OAwACFRvcGljQS9CAAc=
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending valid publish
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: NQwACFRvcGljQS9DAAk=
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Server -> Fuzzer: UAIACQ==
+
+1501752276:ea00c47b-05b3-401f-b46a-a9a3e6533ace:End of session, initiating disconnect.
+Closed the port for ea00c47b-05b3-401f-b46a-a9a3e6533ace
+1501752276:060f22e1-1a31-4862-9049-118ebc21282e:End of session, initiating disconnect.
+Closed the port for 060f22e1-1a31-4862-9049-118ebc21282e
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Sending valid disconnect
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:Fuzzer -> Server: 4AA=
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending valid publish-ack
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: QAIAAg==
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending fuzzed publish-release
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: YmJiYmICYmICYmJiYmIC
+1501752276:c50af4fa-dde1-446e-b774-3deccd7bbfac:End of session, initiating disconnect.
+Closed the port for c50af4fa-dde1-446e-b774-3deccd7bbfac
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending fuzzed publish-release
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: YmJiAgDzoIC9BAQEAgIEAgQEBA==
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending valid subscribe
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: ghgADAAIVG9waWNBLyMCAAhUb3BpY0EvKwE=
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending valid publish-complete
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: cAIAAQ==
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending fuzzed publish-received
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: UFBQUFBQUFBQUFBQUN1zZnNQUFBQUM2Pj4+Pj48aj1BQUFBQUFBQUFBQUFBQUFBQUFDDUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUNJQUFAuUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQllBQUFBQUFBQSoL/Nw==
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Server -> Fuzzer: cAJiYmICUFA=
+
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending valid publish-received
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: UAIAAQ==
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending valid publish-ack
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: QAIAAQ==
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending valid publish-complete
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: cAIAAg==
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Sending valid disconnect
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:Fuzzer -> Server: 4AA=
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Sending valid disconnect
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:Fuzzer -> Server: 4AA=
+1501752276:0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd:End of session, initiating disconnect.
+Closed the port for 0cf2ee7a-6484-42b3-96fe-ef61f5d80ddd
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:f3d6720f-7b1b-4a52-af36-9f6dda4baaa6:Connected to server
+1501752276:f3d6720f-7b1b-4a52-af36-9f6dda4baaa6:Sending fuzzed connect
+1501752276:f3d6720f-7b1b-4a52-af36-9f6dda4baaa6:Fuzzer -> Server: EOKAjxYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752276:cb17185f-c7bb-40cc-a6df-49ee766990d5:End of session, initiating disconnect.
+Closed the port for cb17185f-c7bb-40cc-a6df-49ee766990d5
+1501752276:f3d6720f-7b1b-4a52-af36-9f6dda4baaa6:Sending valid disconnect
+1501752276:f3d6720f-7b1b-4a52-af36-9f6dda4baaa6:Fuzzer -> Server: 4AA=
+1501752276:f3d6720f-7b1b-4a52-af36-9f6dda4baaa6:End of session, initiating disconnect.
+Closed the port for f3d6720f-7b1b-4a52-af36-9f6dda4baaa6
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Connected to server
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Sending valid connect
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Server -> Fuzzer: IAIAAA==
+
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Sending valid subscribe
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Fuzzer -> Server: ggwABQAHL1RvcGljQQI=
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Server -> Fuzzer: kAMABQI=
+
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Sending valid disconnect
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:Fuzzer -> Server: 4AA=
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Connected to server
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Sending valid connect
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Fuzzer -> Server: EBcABE1RVFQEAgAAAAtteWNsaWVudGlkMg==
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Server -> Fuzzer: IAIAAA==
+
+1501752276:844c91fb-f651-4a4d-8f38-ac99d45f9fd9:End of session, initiating disconnect.
+Closed the port for 844c91fb-f651-4a4d-8f38-ac99d45f9fd9
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Sending valid subscribe
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Fuzzer -> Server: gg0ABgAIVG9waWNBLyMC
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Server -> Fuzzer: kAMABgI=
+
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Sending fuzzed publish
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Fuzzer -> Server: MBAAB1RvcGljQS9DAAk=
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Sending valid disconnect
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:Fuzzer -> Server: 4AA=
+1501752276:68e72a06-da65-44c2-a917-9f02f74668f1:End of session, initiating disconnect.
+Closed the port for 68e72a06-da65-44c2-a917-9f02f74668f1
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Connected to server
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending fuzzed connect
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: EBcETVFUVARNUVRUBE1RVFQE77yPAgAA86CBugALbXljbGll86CBkW50aWQ5MjIzMzcyMDM2ODU0Nzc1ODA3
+1501752276:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752276:Reconnecting
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Connected to server
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid connect
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Server -> Fuzzer: IAIBAA==
+
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid subscribe
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: ggYAAgABIwA=
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid publish
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: MA8ACFRvcGljQS9CcW9zIDA=
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid publish
+1501752276:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: MhAAB1RvcGljL0MAAnFvcyAx
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid publish-release
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: YgIADQ==
+1501752276:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Server -> Fuzzer: cAIADQ==
+
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid publish-ack
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: QAIAAQ==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid subscribe
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Server -> Fuzzer: kAMAAgI=
+
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid publish-release
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: YgIACA==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid publish-received
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: UAIAAg==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Server -> Fuzzer: YgIAAg==
+
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid publish-complete
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: cAIAAQ==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid publish-ack
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: QAIAAQ==
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid publish-received
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: UAIAAg==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Sending valid disconnect
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:Fuzzer -> Server: 4AA=
+1501752277:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752277:Reconnecting
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:Connected to server
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:Sending valid connect
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:Fuzzer -> Server: EDgABE1RVFQEFgACAApteWNsaWVudGlkAAdUb3BpYy9DABdjbGllbnQgbm90IGRpc2Nvbm5lY3RlZA==
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:Server -> Fuzzer: IAIAAA==
+
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid publish-complete
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: cAIAAQ==
+1501752277:134c29f4-c7ed-4ae2-94c8-1138cd3e3db5:End of session, initiating disconnect.
+Closed the port for 134c29f4-c7ed-4ae2-94c8-1138cd3e3db5
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:Sending valid disconnect
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:Fuzzer -> Server: 4AA=
+1501752277:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752277:Reconnecting
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Connected to server
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Sending valid connect
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Fuzzer -> Server: EBcABE1RVFQEAAAAAAtteWNsaWVudGlkMg==
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Server -> Fuzzer: IAIAAA==
+
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Sending valid disconnect
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:Fuzzer -> Server: 4AA=
+1501752277:fa90fb83-427f-482f-bd2e-161129b599d5:End of session, initiating disconnect.
+Closed the port for fa90fb83-427f-482f-bd2e-161129b599d5
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Sending valid subscribe
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Fuzzer -> Server: gggABwADKy8rAg==
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Server -> Fuzzer: kAMABwIzEAAHVG9waWMvQwABcW9zIDE=
+
+1501752277:8b566ce8-e43b-45d9-bb2f-721c647d35aa:End of session, initiating disconnect.
+Closed the port for 8b566ce8-e43b-45d9-bb2f-721c647d35aa
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Sending valid disconnect
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:Fuzzer -> Server: 4AA=
+1501752277:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1501752277:Reconnecting
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Connected to server
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Sending valid connect
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Server -> Fuzzer: IAIAAA==
+
+1501752277:73aaa4d0-2c5e-4a99-8501-21e1571a9bf6:End of session, initiating disconnect.
+Closed the port for 73aaa4d0-2c5e-4a99-8501-21e1571a9bf6
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Sending valid subscribe
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Fuzzer -> Server: gggACgADKy8rAg==
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Server -> Fuzzer: kAMACgIzEAAHVG9waWMvQwABcW9zIDE=
+
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Sending valid publish
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Fuzzer -> Server: NBEACFRvcGljQS9DAANxb3MgMg==
+1501752277:463c9e64-a633-44ac-bd56-51375e723126:Server -> Fuzzer: UAIAAw==
+
+1501752277:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]
+1501752277:Reconnecting
+1501752277:Stopped fuzz run to localhost:1883

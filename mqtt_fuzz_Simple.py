@@ -43,14 +43,22 @@ class MQTTFuzzProtocol(Protocol):
         :param data: Data received from remote peer
 
         """
-        print "%s:%s:Server -> Fuzzer: %s" % (calendar.timegm(time.gmtime()), self.session_id, binascii.b2a_base64(data))
+        print "%s:%s:Server -> Fuzzer: %s" % (calendar.timegm(time.gmtime()), self.session_id, data) #binascii.b2a_base64(data))
 
     def connectionMade(self):
         """Callback. We have connected to the MQTT server, so start banging away
 
         """
         print "%s:%s:Connected to server" % (calendar.timegm(time.gmtime()), self.session_id)
-        self.send_next_pdu()
+        self.send_string('EBYABE1RVFQEAgAAAApteWPzAAAACm15FgAETVFUVAQAAAAACm15Y2xpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzEBYABE1RVFQEAAAAAG5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudPNpZW5082llbnTzaWVudP'.decode('base64'))
+
+    def send_string(self,str):
+        """Just send str and lose connect.
+        """
+        print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, str) #binascii.b2a_base64(data).rstrip())
+        self.transport.write(str)
+        self.transport.loseConnection()            
+        
 
     def send_next_pdu(self):
         """Send a PDU and schedule the next PDU
@@ -66,7 +74,6 @@ class MQTTFuzzProtocol(Protocol):
             # connection. It will trigger a reconnection in the factory.
             print "%s:%s:End of session, initiating disconnect." % (calendar.timegm(time.gmtime()), self.session_id)
             self.transport.loseConnection()
-            print "Closed the port for %s" % self.session_id
 
     def send_pdu(self, pdutype):
         """Send either a valid case or a fuzz case
@@ -84,7 +91,7 @@ class MQTTFuzzProtocol(Protocol):
             else:
                 print "%s:%s:Sending valid %s" % (calendar.timegm(time.gmtime()), self.session_id, pdutype)
                 data = self.fuzzdata.get_valid_case(os.path.join(self.validcases_path, pdutype))
-            print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, binascii.b2a_base64(data).rstrip())
+            print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, data) #binascii.b2a_base64(data).rstrip())
             self.transport.write(data)
         except (IOError, OSError) as err:
             print "Could not run the fuzzer. Check -validcases and -radamsa options. The error was: %s" % err
@@ -182,4 +189,10 @@ if __name__ == '__main__':
                         default='radamsa', required=False,
                         help='Path and name of the Radamsa binary, default "radamsa"')
     args = parser.parse_args()
+    host=args.host
+    port=args.port
+    ratio=args.ratio
+    delay=args.delay
+    radamsa = args.fuzzer
+    validcases=args.validcases
     run_tests(args.host, args.port, args.ratio, args.delay, args.fuzzer, args.validcases)

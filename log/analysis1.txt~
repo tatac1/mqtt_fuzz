@@ -1,0 +1,25 @@
+1) Detect a crash and get a UNIX epoch timestamp of the crash (shown
+   in gdb by default).
+
+1501638297
+
+2) Select all the lines from the fuzzer's output log that have that
+   timestamp.
+
+log1.txt
+
+3) Determine all the session UUIDs that are listed on those lines.
+
+I ran the following:
+$ cat log1.txt | cut -d ':' -f2 | egrep -v ']|Reconnecting|Connection|Stop|^$' | sort | uniq
+
+0b80189c-e30c-49b4-9be3-5596807f2848
+453b74eb-17d0-4c04-876d-4fd1df9b4fb2
+4d40b0af-e7cd-4bbe-9753-7ed95259693d
+4dc7ac76-4cc8-4c6b-86b0-7807ffc30565
+5ab22134-611d-4447-8d4d-e386787bbbf5
+5c1119d9-2142-4798-b0b0-308d8e25e0de
+92a8ca7a-dedf-41de-be22-8da22bfec88c
+bdb0c841-021e-4ca0-9347-4f3453ad5232
+dfbb35d7-cc11-48be-8bfc-c9baaf540d43
+
