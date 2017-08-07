@@ -52,6 +52,10 @@ class MQTTFuzzProtocol(Protocol):
         print "%s:%s:Connected to server" % (calendar.timegm(time.gmtime()), self.session_id)
         self.send_next_pdu()
 
+    def connectionLost(self, reason):
+        print "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+        self.callLaterHandle.cancel()
+
     def send_next_pdu(self):
         """Send a PDU and schedule the next PDU
 
@@ -60,13 +64,13 @@ class MQTTFuzzProtocol(Protocol):
 
         try:
             self.send_pdu(self.current_session.next())
-            reactor.callLater(self.send_delay / 1000, self.send_next_pdu)
+            self.callLaterHandle=reactor.callLater(self.send_delay / 1000, self.send_next_pdu)
         except StopIteration:
             # We have sent all the PDUs of this session. Tear down
             # connection. It will trigger a reconnection in the factory.
             print "%s:%s:End of session, initiating disconnect." % (calendar.timegm(time.gmtime()), self.session_id)
+            self.callLaterHandle=reactor.callLater(1000, self.send_next_pdu) #  makeshift
             self.transport.loseConnection()
-            print "Closed the port for %s" % self.session_id
 
     def send_pdu(self, pdutype):
         """Send either a valid case or a fuzz case
