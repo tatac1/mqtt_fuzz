@@ -32,7 +32,6 @@ import calendar
 import argparse
 import os
 
-
 class MQTTFuzzProtocol(Protocol):
     '''Implementation of a pseudo-MQTT protocol that conducts predefined MQTT
     sessions by replaying a series of stored MQTT control packets.'''
@@ -53,7 +52,6 @@ class MQTTFuzzProtocol(Protocol):
         self.send_next_pdu()
 
     def connectionLost(self, reason):
-        print "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
         self.callLaterHandle.cancel()
 
     def send_next_pdu(self):
@@ -104,12 +102,9 @@ class MQTTClientFactory(ClientFactory):
     # copy some raw valid control packets into a directory under valid-cases
     # and refer to that directory by name in one of these sessions here.
     # See readme.txt.
-    session_structures = [
-        ['connect', 'disconnect'],
-        ['connect', 'subscribe', 'disconnect'],
-        ['connect', 'subscribe', 'publish', 'disconnect'],
-        ['connect', 'subscribe', 'publish', 'publish-ack', 'publish-release', 'publish-complete', 'publish-received', 'publish-complete', 'disconnect'],
-        ['connect', 'publish', 'publish-release', 'subscribe', 'publish-received', 'publish-ack', 'disconnect']]
+    control_packets_in_between = ['subscribe', 'publish', 'publish-ack', 'publish-release', 'publish-complete', 'publish-received']
+    session_length = 6
+    session_structures = [('connect',) + middle + ('disconnect',) for middle in itertools.permutations(control_packets_in_between, session_length-2)]
 
     def __init__(self, fuzz_ratio, send_delay, radamsa_path, validcases_path):
         # We cycle through the sessions again and again
@@ -158,6 +153,7 @@ def run_tests(host, port, ratio, delay, radamsa, validcases):  # pylint: disable
     hostname = host
     port = int(port)
     print "%s:Starting fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
+#    reactor.connectTCP(hostname, port, factory)
     reactor.connectTCP(hostname, port, factory)
     reactor.run()
     print "%s:Stopped fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
