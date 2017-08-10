@@ -32,7 +32,6 @@ import calendar
 import argparse
 import os
 
-
 class MQTTFuzzProtocol(Protocol):
     '''Implementation of a pseudo-MQTT protocol that conducts predefined MQTT
     sessions by replaying a series of stored MQTT control packets.'''
@@ -43,22 +42,17 @@ class MQTTFuzzProtocol(Protocol):
         :param data: Data received from remote peer
 
         """
-        print "%s:%s:Server -> Fuzzer: %s" % (calendar.timegm(time.gmtime()), self.session_id, data) #binascii.b2a_base64(data))
+        print "%s:%s:Server -> Fuzzer: %s" % (calendar.timegm(time.gmtime()), self.session_id, binascii.b2a_base64(data))
 
     def connectionMade(self):
         """Callback. We have connected to the MQTT server, so start banging away
 
         """
         print "%s:%s:Connected to server" % (calendar.timegm(time.gmtime()), self.session_id)
-        self.send_string("MQTT")
+        self.send_next_pdu()
 
-    def send_string(self,str):
-        """Just send str and lose connect.
-        """
-        print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, str) #binascii.b2a_base64(data).rstrip())
-        self.transport.write(str)
-        self.transport.loseConnection()            
-        
+    def connectionLost(self, reason):
+        self.callLaterHandle.cancel()
 
     def send_next_pdu(self):
         """Send a PDU and schedule the next PDU
@@ -68,11 +62,12 @@ class MQTTFuzzProtocol(Protocol):
 
         try:
             self.send_pdu(self.current_session.next())
-            reactor.callLater(self.send_delay / 1000, self.send_next_pdu)
+            self.callLaterHandle=reactor.callLater(self.send_delay / 1000, self.send_next_pdu)
         except StopIteration:
             # We have sent all the PDUs of this session. Tear down
             # connection. It will trigger a reconnection in the factory.
             print "%s:%s:End of session, initiating disconnect." % (calendar.timegm(time.gmtime()), self.session_id)
+            self.callLaterHandle=reactor.callLater(1000, self.send_next_pdu) #  makeshift
             self.transport.loseConnection()
 
     def send_pdu(self, pdutype):
@@ -91,7 +86,7 @@ class MQTTFuzzProtocol(Protocol):
             else:
                 print "%s:%s:Sending valid %s" % (calendar.timegm(time.gmtime()), self.session_id, pdutype)
                 data = self.fuzzdata.get_valid_case(os.path.join(self.validcases_path, pdutype))
-            print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, data) #binascii.b2a_base64(data).rstrip())
+            print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, binascii.b2a_base64(data).rstrip())
             self.transport.write(data)
         except (IOError, OSError) as err:
             print "Could not run the fuzzer. Check -validcases and -radamsa options. The error was: %s" % err
@@ -107,12 +102,9 @@ class MQTTClientFactory(ClientFactory):
     # copy some raw valid control packets into a directory under valid-cases
     # and refer to that directory by name in one of these sessions here.
     # See readme.txt.
-    session_structures = [
-        ['connect', 'disconnect'],
-        ['connect', 'subscribe', 'disconnect'],
-        ['connect', 'subscribe', 'publish', 'disconnect'],
-        ['connect', 'subscribe', 'publish', 'publish-ack', 'publish-release', 'publish-complete', 'publish-received', 'publish-complete', 'disconnect'],
-        ['connect', 'publish', 'publish-release', 'subscribe', 'publish-received', 'publish-ack', 'disconnect']]
+    control_packets_in_between = ['subscribe', 'publish', 'publish-ack', 'publish-release', 'publish-complete', 'publish-received']
+    session_length = 6
+    session_structures = [('connect',) + middle + ('disconnect',) for middle in itertools.permutations(control_packets_in_between, session_length-2)]
 
     def __init__(self, fuzz_ratio, send_delay, radamsa_path, validcases_path):
         # We cycle through the sessions again and again
@@ -153,15 +145,14 @@ class MQTTClientFactory(ClientFactory):
         print "%s:Reconnecting" % calendar.timegm(time.gmtime())
         connector.connect()
 
-def run_tests(host, port, ratio, delay, radamsa, validcases):  # pylint: disable=R0913
+def run_tests(host, port, ratio, delay, radamsa, validcases):
     '''Main function to run'''
     from twisted.internet import reactor
-
-    factory = MQTTClientFactory(ratio, delay, radamsa, validcases)
+#    factory = MQTTClientFactory(ratio, delay, radamsa, validcases)
     hostname = host
     port = int(port)
     print "%s:Starting fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
-    reactor.connectTCP(hostname, port, factory)
+    reactor.connectTCP(hostname, port, MQTTClientFactory(ratio, delay, radamsa, validcases))
     reactor.run()
     print "%s:Stopped fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
 
@@ -174,7 +165,7 @@ if __name__ == '__main__':
                         help='Host name of MQTT server / broker under test')
     parser.add_argument('port', metavar='target_port',
                         type=int,
-                        default=1883,
+                        default=1883, 
                         help='Port number of MQTT server / broker under test')
     parser.add_argument('-ratio', metavar='fuzz_ratio',
                         type=int, required=False, choices=range(0, 11),
@@ -189,10 +180,4 @@ if __name__ == '__main__':
                         default='radamsa', required=False,
                         help='Path and name of the Radamsa binary, default "radamsa"')
     args = parser.parse_args()
-    host=args.host
-    port=args.port
-    ratio=args.ratio
-    delay=args.delay
-    radamsa = args.fuzzer
-    validcases=args.validcases
     run_tests(args.host, args.port, args.ratio, args.delay, args.fuzzer, args.validcases)

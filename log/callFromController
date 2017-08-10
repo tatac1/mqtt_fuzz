@@ -1,0 +1,2339 @@
+Cores: 4
+PIDs: [14433, 14434, 14435, 14436]
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Connected; self.fuzzers: {('localhost', 8803): <twisted.spread.pb.RemoteReference instance at 0x10e0b8878>, ('localhost', 8801): <twisted.spread.pb.RemoteReference instance at 0x10e0b4c68>, ('localhost', 8802): <twisted.spread.pb.RemoteReference instance at 0x10e0b8a28>, ('localhost', 8800): <twisted.spread.pb.RemoteReference instance at 0x10e0b8440>}
+Start fuzzing...
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 255, in _disconnectSelectable
+    selectable.connectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+1502243658:Starting fuzz run to localhost:1883
+1502243658:Stopped fuzz run to localhost:1883
+1502243658:d0db6b68-0300-464e-a5e6-3e2ea4dd326a:Connected to server
+1502243658:d0db6b68-0300-464e-a5e6-3e2ea4dd326a:Sending fuzzed connect
+Wed Aug  9 01:54:18 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502243659:d0db6b68-0300-464e-a5e6-3e2ea4dd326a:Fuzzer -> Server: EDgABE1RVFQEFgACAApteWNsaWVudGlkAAdUb3BpYy9DABdjbGllaWMvQwAXY2xpZW50IG5vdCBkaXNjb25uZWN0ZWQ=
+1502243659:d0db6b68-0300-464e-a5e6-3e2ea4dd326a:Server -> Fuzzer: IAIAAA==
+
+1502243659:Starting fuzz run to localhost:1883
+1502243659:Stopped fuzz run to localhost:1883
+1502243659:04b70f8e-bd66-47d0-a3a8-c8d5a2840baf:Connected to server
+1502243659:04b70f8e-bd66-47d0-a3a8-c8d5a2840baf:Sending valid connect
+1502243659:04b70f8e-bd66-47d0-a3a8-c8d5a2840baf:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243659:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243659:Reconnecting
+1502243659:04b70f8e-bd66-47d0-a3a8-c8d5a2840baf:Server -> Fuzzer: IAIAAA==
+
+1502243659:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243659:Reconnecting
+1502243660:395b4cc2-d282-48c1-a458-51df1220f8c9:Connected to server
+1502243660:395b4cc2-d282-48c1-a458-51df1220f8c9:Sending valid connect
+1502243660:395b4cc2-d282-48c1-a458-51df1220f8c9:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243660:395b4cc2-d282-48c1-a458-51df1220f8c9:Server -> Fuzzer: IAIAAA==
+
+1502243660:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243660:Reconnecting
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Connected to server
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Sending valid connect
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Server -> Fuzzer: IAIAAA==
+
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Sending valid subscribe
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Server -> Fuzzer: kAMAAgI=
+
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Sending valid publish
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Server -> Fuzzer: MA0ABlRvcGljQXFvcyAw
+
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Sending valid publish-ack
+1502243660:14f7aec1-ee89-4476-9668-176a0ecfefb8:Fuzzer -> Server: QAIAAQ==
+1502243661:14f7aec1-ee89-4476-9668-176a0ecfefb8:Sending valid publish-complete
+1502243661:14f7aec1-ee89-4476-9668-176a0ecfefb8:Fuzzer -> Server: cAIAAg==
+1502243661:14f7aec1-ee89-4476-9668-176a0ecfefb8:Sending valid disconnect
+1502243661:14f7aec1-ee89-4476-9668-176a0ecfefb8:Fuzzer -> Server: 4AA=
+1502243661:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243661:Reconnecting
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Connected to server
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Sending valid connect
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Server -> Fuzzer: IAIAAA==
+
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Sending valid subscribe
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Server -> Fuzzer: kAMAAgI=
+
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Sending valid publish
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Server -> Fuzze1502243658:Starting fuzz run to localhost:1883
+1502243658:Stopped fuzz run to localhost:1883
+1502243658:d46cb023-826f-46a6-9a7d-1d2f97dd6e4f:Connected to server
+1502243658:d46cb023-826f-46a6-9a7d-1d2f97dd6e4f:Sending valid connect
+1502243658:d46cb023-826f-46a6-9a7d-1d2f97dd6e4f:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243658:d46cb023-826f-46a6-9a7d-1d2f97dd6e4f:Server -> Fuzzer: IAIAAA==
+
+1502243658:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243658:Reconnecting
+1502243659:Starting fuzz run to localhost:1883
+1502243659:Stopped fuzz run to localhost:1883
+1502243659:d030e713-747f-4ce1-9a0c-02fbf2dc082e:Connected to server
+1502243659:d030e713-747f-4ce1-9a0c-02fbf2dc082e:Sending valid connect
+1502243659:d030e713-747f-4ce1-9a0c-02fbf2dc082e:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243659:d030e713-747f-4ce1-9a0c-02fbf2dc082e:Server -> Fuzzer: IAIAAA==
+
+1502243659:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243659:Reconnecting
+1502243659:6c55195e-bf88-40a1-88a7-8f0aca494a8d:Connected to server
+1502243659:6c55195e-bf88-40a1-88a7-8f0aca494a8d:Sending fuzzed connect
+Wed Aug  9 01:54:19 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502243660:6c55195e-bf88-40a1-88a7-8f0aca494a8d:Fuzzer -> Server: EBYABE1RU1QEAgAAAApteWNsaWVudGlk
+1502243660:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243660:Reconnecting
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Connected to server
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Sending valid connect
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Server -> Fuzzer: IAIAAA==
+
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Sending valid subscribe
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Server -> Fuzzer: kAMAAgI=
+
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Sending valid publish
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243660:ea6ca8c3-2e8a-4c99-baf5-9753682507a3:Server -> Fuzzer: MA0ABlRvcGljQXFvcyAw
+
+1502243660:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243660:Reconnecting
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Connected to server
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Sending valid connect
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Server -> Fuzzer: IAIAAA==
+
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Sending valid subscribe
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Server -> Fuzzer: kAMAAgI=
+
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Sending valid publish
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243661:a6bb3ac1-2d70-4e7a-b996-5d9bc9500dfb:Server -> Fuzzer: MA0ABlRvcGljQXFvcyAw
+
+1502243661:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243661:Reconnecting
+1502243661:223f295d-2cc5-4709-9ec0-ec8b587c4ef6:Connected to server
+1502243661:223f295d-2cc5-4709-9ec0-ec8b587c4ef6:Sending valid connect
+1502243661:223f295d-2cc5-4709-9ec0-ec8b587c4ef6:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243661:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.intUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+1502243658:Starting fuzz run to localhost:1883
+1502243658:Stopped fuzz run to localhost:1883
+1502243658:c964b590-56ad-4ad1-9928-895528b15790:Connected to server
+1502243658:c964b590-56ad-4ad1-9928-895528b15790:Sending fuzzed connect
+Wed Aug  9 01:54:18 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Fuzzer -> Server: EGNsaWVudGlkLTA=
+1502243659:Starting fuzz run to localhost:1883
+1502243659:Stopped fuzz run to localhost:1883
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Connected to server
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Sending valid connect
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Server -> Fuzzer: IAIAAA==
+
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Sending valid subscribe
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Sending valid subscribe
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Server -> Fuzzer: kAMAAgI=
+
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Sending valid publish
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Sending valid publish
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Server -> Fuzzer: MA0ABlRvcGljQXFvcyAw
+
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Sending valid publish-ack
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Fuzzer -> Server: QAIAAQ==
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Sending valid publish-ack
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Fuzzer -> Server: QAIAAQ==
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Sending valid publish-release
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Fuzzer -> Server: YgIABA==
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Sending valid publish-release
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Fuzzer -> Server: YgIABA==
+1502243659:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Server -> Fuzzer: cAIABA==
+
+1502243659:c964b590-56ad-4ad1-9928-895528b15790:Sending fuzzed disconnect
+Wed Aug  9 01:54:19 2017:Generating 500 new fuzz cases for path 'valid-cases/disconnect'
+1502243660:c964b590-56ad-4ad1-9928-895528b15790:Fuzzer -> Server: 4PKggKnzoMOfgIEA
+1502243660:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Sending valid disconnect
+1502243660:b3c2e9ed-9d4f-4aa1-aee9-064e89bc2cdd:Fuzzer -> Server: 4AA=
+1502243660:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243660:Reconnecting
+1502243660:c964b590-56ad-4ad1-9928-895528b15790:End of session, initiating disconnect.
+1502243660:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243660:Reconnecting
+1502243661:ea5b4317-a541-4422-b002-09e50ce38905:Connected to server
+1502243661:ea5b4317-a541-4422-b002-09e50ce38905:Sending valid connect
+1502243661:ea5b4317-a541-4422-b002-09e50ce38905:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243661:ea5b4317-a541-4422-b002-09e50ce38905:Server -> Fuzzer: IAIAAA==
+
+1502243661:ea5b4317-a541-4422-b002-09e50ce38905:Sending fuzzed subscribe
+Wed Aug  9 01:54:21 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502243662:ea5b4317-a541-4422-b002-09e50ce38905:Fuzzer -> Server: gggACwADKy8sAg==
+1502243662:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243662:Reconnecting
+1502243662:5d3f497f-9462-4d8b-85db-6d4df8a0f20e:Connected to server
+1502243662:5d3f497f-9462-4d8b-85db-6d4df8a0f20e:Sending fuzzed connect
+Wed Aug  9 01:54:22 2017:GenUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+1502243658:Starting fuzz run to localhost:1883
+1502243658:Stopped fuzz run to localhost:1883
+1502243658:71f5cae8-48d2-45a2-b061-af7f0f2466d1:Connected to server
+1502243658:71f5cae8-48d2-45a2-b061-af7f0f2466d1:Sending valid connect
+1502243658:71f5cae8-48d2-45a2-b061-af7f0f2466d1:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243658:71f5cae8-48d2-45a2-b061-af7f0f2466d1:Server -> Fuzzer: IAIAAA==
+
+1502243658:71f5cae8-48d2-45a2-b061-af7f0f2466d1:Sending fuzzed subscribe
+Wed Aug  9 01:54:18 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502243659:71f5cae8-48d2-45a2-b061-af7f0f2466d1:Fuzzer -> Server: gggFAAeCCAUABy9Ub3BpY0EC
+1502243659:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243659:Reconnecting
+1502243659:Starting fuzz run to localhost:1883
+1502243659:Stopped fuzz run to localhost:1883
+1502243659:a5ae88a7-3c79-40b5-b4af-aa44d7bc2705:Connected to server
+1502243659:a5ae88a7-3c79-40b5-b4af-aa44d7bc2705:Sending valid connect
+1502243659:a5ae88a7-3c79-40b5-b4af-aa44d7bc2705:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243659:a5ae88a7-3c79-40b5-b4af-aa44d7bc2705:Server -> Fuzzer: IAIAAA==
+
+1502243659:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243659:Reconnecting
+1502243660:03f653b2-1081-4e08-b88a-2ceed75e318e:Connected to server
+1502243660:03f653b2-1081-4e08-b88a-2ceed75e318e:Sending valid connect
+1502243660:03f653b2-1081-4e08-b88a-2ceed75e318e:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243660:03f653b2-1081-4e08-b88a-2ceed75e318e:Server -> Fuzzer: IAIAAA==
+
+1502243660:03f653b2-1081-4e08-b88a-2ceed75e318e:Sending fuzzed subscribe
+Wed Aug  9 01:54:20 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502243661:03f653b2-1081-4e08-b88a-2ceed75e318e:Fuzzer -> Server: ggAA8/Pz8/Og86CBkoGwoIGhAgAGVG9waWPzoICv4oCoQQI=
+1502243661:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243661:Reconnecting
+1502243661:86554530-89fc-49cd-971e-e5d7dfbeca38:Connected to server
+1502243661:86554530-89fc-49cd-971e-e5d7dfbeca38:Sending fuzzed connect
+Wed Aug  9 01:54:21 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Fuzzer -> Server: EBcABE1RVFQEAAAAAAttefOggbBjbGllbuGagHRpZDI=
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Server -> Fuzzer: IAIAAA==
+
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Sending valid subscribe
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Sending valid publish
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Sending valid publish-ack
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Fuzzer -> Server: QAIAAQ==
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Sending valid publish-complete
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Fuzzer -> Server: cAIAAg==
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Sending valid disconnect
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:Fuzzer -> Server: 4AA=
+1502243662:e84bece2-f6ac-4bcc-b6c1-cb14f4be7480:Connected to server
+1502243662:e84bece2-f6ac-4bcc-b6c1-cb14f4be7480:Sending valid connect
+1502243662:e84bece2-f6ac-4bcc-b6c1-cb14f4be7480:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243662:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243662:Reconnecting
+1502243662:86554530-89fc-49cd-971e-e5d7dfbeca38:End of session, initiating disconnect.
+1502243662:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.errorUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 255, in _disconnectSelectable
+    selectable.connectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+ernet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243661:Reconnecting
+1502243662:817f148c-dfc1-4a91-a645-63f7ab920046:Connected to server
+1502243662:817f148c-dfc1-4a91-a645-63f7ab920046:Sending valid connect
+1502243662:817f148c-dfc1-4a91-a645-63f7ab920046:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243662:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243662:Reconnecting
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Connected to server
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Sending valid connect
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Server -> Fuzzer: IAIAAA==
+
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Sending valid subscribe
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Fuzzer -> Server: gggABwADKy8rAg==
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Sending valid publish
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Server -> Fuzzer: QAIAAw==
+
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Sending valid publish-release
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Fuzzer -> Server: YgIABA==
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Server -> Fuzzer: cAIABA==
+
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Sending valid publish-ack
+1502243662:e294813a-9cdc-45c7-a708-1f14901d102f:Fuzzer -> Server: QAIAAQ==
+1502243663:e294813a-9cdc-45c7-a708-1f14901d102f:Sending valid disconnect
+1502243663:e294813a-9cdc-45c7-a708-1f14901d102f:Fuzzer -> Server: 4AA=
+1502243663:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243663:Reconnecting
+1502243663:7b02d7c8-f658-4e50-adae-1b5f9a1acedb:Connected to server
+1502243663:7b02d7c8-f658-4e50-adae-1b5f9a1acedb:Sending valid connect
+1502243663:7b02d7c8-f658-4e50-adae-1b5f9a1acedb:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243663:7b02d7c8-f658-4e50-adae-1b5f9a1acedb:Server -> Fuzzer: IAIAAA==
+
+1502243663:7b02d7c8-f658-4e50-adae-1b5f9a1acedb:Sending fuzzed subscribe
+Wed Aug  9 01:54:23 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502243664:7b02d7c8-f658-4e50-adae-1b5f9a1acedb:Fuzzer -> Server: gg0ABgAIVG9waWNBwK8jAgAIVG9waWNBLysB
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Connected to server
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Sending valid connect
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Server -> Fuzzer: IAIAAA==
+
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Sending valid subscribe
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Fuzzer -> Server: gggACgADKy8rAg==
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Server -> Fuzzer: kAMACgIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Sending valid publish
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Server -> Fuzzer: UAIABA==
+
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Sending valid publish-release
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Fuzzer -> Server: YgIABg==
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Server -> Fuzzer: cAIABg==
+
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Sending valid publish-complete
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Fuzzer -> Server: cAIAAg==
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Sending valid disconUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+r: MA0ABlRvcGljQXFvcyAw
+
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Sending valid publish-ack
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Fuzzer -> Server: QAIAAQ==
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Sending valid publish-received
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Fuzzer -> Server: UAIAAg==
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Server -> Fuzzer: YgIAAg==
+
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Sending valid disconnect
+1502243661:f1fb8385-a9a7-4303-9a59-09fdec4ae125:Fuzzer -> Server: 4AA=
+1502243661:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243661:Reconnecting
+1502243662:31a716d2-a9d1-41a4-ac79-74dd8b6d902a:Connected to server
+1502243662:31a716d2-a9d1-41a4-ac79-74dd8b6d902a:Sending valid connect
+1502243662:31a716d2-a9d1-41a4-ac79-74dd8b6d902a:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243662:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243662:Reconnecting
+1502243663:2fac09d8-a15c-4d9f-b60e-9158d1d1db45:Connected to server
+1502243663:2fac09d8-a15c-4d9f-b60e-9158d1d1db45:Sending valid connect
+1502243663:2fac09d8-a15c-4d9f-b60e-9158d1d1db45:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243663:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243663:Reconnecting
+1502243663:5c3461dc-6fbd-46e0-aa91-b55f7c45a938:Connected to server
+1502243663:5c3461dc-6fbd-46e0-aa91-b55f7c45a938:Sending valid connect
+1502243663:5c3461dc-6fbd-46e0-aa91-b55f7c45a938:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243663:5c3461dc-6fbd-46e0-aa91-b55f7c45a938:Server -> Fuzzer: IAIAAA==
+
+1502243663:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243663:Reconnecting
+1502243664:892da184-d57d-426a-aac8-6cebce9b6b73:Connected to server
+1502243664:892da184-d57d-426a-aac8-6cebce9b6b73:Sending valid connect
+1502243664:892da184-d57d-426a-aac8-6cebce9b6b73:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243664:892da184-d57d-426a-aac8-6cebce9b6b73:Server -> Fuzzer: IAIAAA==
+
+1502243664:892da184-d57d-426a-aac8-6cebce9b6b73:Sending fuzzed subscribe
+Wed Aug  9 01:54:24 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502243664:892da184-d57d-426a-aac8-6cebce9b6b73:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Connected to server
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Sending valid connect
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Server -> Fuzzer: IAIAAA==
+
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Sending valid subscribe
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Fuzzer -> Server: gggABwADKy8rAg==
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Sending valid publish
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Server -> Fuzzer: QAIAAw==
+
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Sending valid publish-release
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Fuzzer -> Server: YgIABA==
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Server -> Fuzzer: cAIABA==
+
+1502243664:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Sending fuzzed publish-complete
+Wed Aug  9 01:54:24 2017:Generating 500 new fuzz cases for path 'vUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+erating 500 new fuzz cases for path 'valid-cases/connect'
+1502243662:5d3f497f-9462-4d8b-85db-6d4df8a0f20e:Fuzzer -> Server: BBYAAgAKbXljbGllbnRpZAAHVG9waWMvQwAXY2xpZW50IG5vdCBkaXNjb25uZWN0ZWQ=
+1502243662:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243662:Reconnecting
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Connected to server
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Sending valid connect
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Server -> Fuzzer: IAIAAA==
+
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Sending valid subscribe
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Fuzzer -> Server: gggABwADKy8rAg==
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Sending fuzzed publish
+Wed Aug  9 01:54:23 2017:Generating 500 new fuzz cases for path 'valid-cases/publish'
+1502243663:50b3b344-1c99-4720-836f-aeba06d58fb0:Fuzzer -> Server: MA0ABvCdn5ZUb3BaY0Fxb3MgMQ==
+1502243663:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243663:Reconnecting
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Connected to server
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Sending valid connect
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Server -> Fuzzer: IAIAAA==
+
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Sending valid subscribe
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Fuzzer -> Server: gggABwADKy8rAg==
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Sending valid publish
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Server -> Fuzzer: QAIAAw==
+
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Sending valid publish-ack
+1502243663:a64813ef-8470-4632-bc07-5168f01cbee1:Fuzzer -> Server: QAIAAg==
+1502243664:a64813ef-8470-4632-bc07-5168f01cbee1:Sending valid publish-received
+1502243664:a64813ef-8470-4632-bc07-5168f01cbee1:Fuzzer -> Server: UAIAAg==
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243664:d06b3233-8577-4754-bbec-dbcf1cbb743b:Connected to server
+1502243664:d06b3233-8577-4754-bbec-dbcf1cbb743b:Sending valid connect
+1502243664:d06b3233-8577-4754-bbec-dbcf1cbb743b:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243664:9db25d9a-cbdd-4559-a134-e12a790dee3e:Connected to server
+1502243664:9db25d9a-cbdd-4559-a134-e12a790dee3e:Sending valid connect
+1502243664:9db25d9a-cbdd-4559-a134-e12a790dee3e:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243665:5fce2f2c-0c99-4645-bc11-55a4a1448449:Connected to server
+1502243665:5fce2f2c-0c99-4645-bc11-55a4a1448449:Sending valid connect
+1502243665:5fce2f2c-0c99-4645-bc11-55a4a1448449:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243665:5fce2f2c-0c99-4645-bc11-55a4a1448449:Server -> Fuzzer: IAIAAA==
+
+1502243665:5fce2f2c-0c99-4645-bc11-55a4a1448449:Sending valid subscribe
+1502243665:5fce2f2c-0c99-4645-bc11-55a4a1448449:Fuzzer -> Server: gggACgADKy8rAg==
+1502243665:5fUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243662:Reconnecting
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Connected to server
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Sending valid connect
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Server -> Fuzzer: IAIAAA==
+
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Sending valid subscribe
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Fuzzer -> Server: gggABwADKy8rAg==
+1502243663:fa4577ac-de22-4986-b570-99903cb9bb00:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Connected to server
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Sending valid connect
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243663:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243663:Reconnecting
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Server -> Fuzzer: IAIAAA==
+
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Sending valid subscribe
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Server -> Fuzzer: kAMAAgI=
+
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Sending valid publish
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502243663:e3ee111d-4749-4003-abce-c266770feda6:Server -> Fuzzer: MA0ABlRvcGljQXFvcyAw
+
+1502243663:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243663:Reconnecting
+1502243664:3f69385d-f4bf-49aa-978a-688fedf4d748:Connected to server
+1502243664:3f69385d-f4bf-49aa-978a-688fedf4d748:Sending valid connect
+1502243664:3f69385d-f4bf-49aa-978a-688fedf4d748:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243664:48d6c523-4e3d-447a-a085-c5bf8dd1fe52:Connected to server
+1502243664:48d6c523-4e3d-447a-a085-c5bf8dd1fe52:Sending fuzzed connect
+Wed Aug  9 01:54:24 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502243665:48d6c523-4e3d-447a-a085-c5bf8dd1fe52:Fuzzer -> Server: EBfzoICgAARNUVRUBAIAAAALbXljbGll4oGlbnRpZDI=
+1502243665:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243665:Reconnecting
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Connected to server
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Sending valid connect
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Server -> Fuzzer: IAIAAA==
+
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Sending valid subscribe
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Fuzzer -> Server: gggACgADKy8rAg==
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Server -> Fuzzer: kAMACgIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Sending valid publish
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1502243665:0deee0aa-6bb7-4a79-8e0e-85baecc5d7e6:Server -> Fuzzer: QAIAAw==
+
+1502243665:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243665:Reconnecting
+1502243666:01c02ecb-8289-4fc2-a339-bfecfc8d6ca9:Connected to server
+1502243666:01c02ecb-8289-4fc2-a339-bfecfc8d6ca9:Sending valid connect
+1502243666:01c02ecb-8289-4fc2-a339-bfecfc8d6ca9:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243666:01c02ecb-8289Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+Unhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+ce2f2c-0c99-4645-bc11-55a4a1448449:Server -> Fuzzer: kAMACgIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243666:5fce2f2c-0c99-4645-bc11-55a4a1448449:Sending valid publish
+1502243666:5fce2f2c-0c99-4645-bc11-55a4a1448449:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1502243666:5fce2f2c-0c99-4645-bc11-55a4a1448449:Server -> Fuzzer: QAIAAw==
+
+1502243666:5fce2f2c-0c99-4645-bc11-55a4a1448449:Sending fuzzed publish-release
+Wed Aug  9 01:54:26 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-release'
+1502243666:5fce2f2c-0c99-4645-bc11-55a4a1448449:Fuzzer -> Server: YgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqA==
+1502243666:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243666:Reconnecting
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Connected to server
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Sending valid connect
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Server -> Fuzzer: IAIAAA==
+
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Sending valid subscribe
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Fuzzer -> Server: gggACgADKy8rAg==
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Server -> Fuzzer: kAMACgIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243666:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Sending fuzzed publish
+Wed Aug  9 01:54:26 2017:Generating 500 new fuzz cases for path 'valid-cases/publish'
+1502243667:8cd741d1-21d4-49b3-b3ab-7f821d0c4530:Fuzzer -> Server: LTg4MTQ0MTg0MTIRAAhUb3BpY0EvQwAGcW9zIDM=
+1502243667:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243667:Reconnecting
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Connected to server
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Sending valid connect
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Server -> Fuzzer: IAIAAA==
+
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Sending valid subscribe
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Fuzzer -> Server: gggACwADKy8rAg==
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Server -> Fuzzer: kAMACwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Sending valid publish
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Server -> Fuzzer: UAIABA==
+
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Sending valid publish-release
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Fuzzer -> Server: YgIABg==
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Server -> Fuzzer: cAIABg==
+
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Sending valid publish-received
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Fuzzer -> Server: UAIAAg==
+1502243667:8cf09352-a1bb-428c-a5db-557777b8e279:Server -> Fuzzer: YgIAAg==
+
+1502243668:8cf09352-a1bb-428c-a5db-557777b8e279:Sending fuzzed disconnect
+1502243668:8cf09352-a1bb-428c-a5db-557777b8e279:Fuzzer -> Server: 4AA=
+1502243668:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243668:Reconnecting
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Connected to server
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Sending valid connect
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Server -> Fuzzer: IAIAAA==
+
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Sending valid subscribe
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Fuzzer -> Server: gggACwADKy8rAg==
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Server -> Fuzzer: kAMACwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:SendingUnhandled Error
+Traceback (most recent call last):
+  File "mqtt_fuzz.py", line 183, in <module>
+    reactor.run()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1243, in run
+    self.mainLoop()
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1255, in mainLoop
+    self.doIteration(t)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 143, in doSelect
+    _logrun(selectable, _drdw, selectable, method)
+--- <exception caught here> ---
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+    return callWithContext({"system": lp}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+    return context.call({ILogContext: newCtx}, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/selectreactor.py", line 154, in _doReadOrWrite
+    self._disconnectSelectable(selectable, why, method=="doRead")
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 252, in _disconnectSelectable
+    selectable.readConnectionLost(f)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 272, in readConnectionLost
+    self.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/tcp.py", line 479, in connectionLost
+    self.connector.connectionLost(reason)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/base.py", line 1136, in connectionLost
+    self.factory.clientConnectionLost(self, reason)
+  File "mqtt_fuzz.py", line 153, in clientConnectionLost
+    defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
+  File "/Users/tabata/.pyenv/versions/2.7.13/lib/python2.7/site-packages/twisted/internet/defer.py", line 1098, in __init__
+    deferred.addCallbacks(self._cbDeferred, self._cbDeferred,
+exceptions.AttributeError: 'NoneType' object has no attribute 'addCallbacks'
+
+alid-cases/publish-complete'
+1502243665:c61d99fe-0a0c-463c-a9fb-dc0de31cf7f2:Fuzzer -> Server: cPPzoIGuAgAB
+1502243665:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243665:Reconnecting
+1502243665:39bd67f8-c6d6-4dd5-a092-82b37e43e1ef:Connected to server
+1502243665:39bd67f8-c6d6-4dd5-a092-82b37e43e1ef:Sending fuzzed connect
+1502243665:39bd67f8-c6d6-4dd5-a092-82b37e43e1ef:Fuzzer -> Server: EBYABE1RVFQEAgAAAAttZW50aWQ=
+1502243665:39bd67f8-c6d6-4dd5-a092-82b37e43e1ef:Sending valid subscribe
+1502243665:39bd67f8-c6d6-4dd5-a092-82b37e43e1ef:Fuzzer -> Server: gggABwADKy8rAg==
+1502243665:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243665:Reconnecting
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Connected to server
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Sending valid connect
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudGlk
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Server -> Fuzzer: IAIBAA==
+
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Sending valid subscribe
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Fuzzer -> Server: gggACgADKy8rAg==
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Server -> Fuzzer: kAMACgIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Sending valid publish
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Server -> Fuzzer: UAIABA==
+
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Sending valid publish-release
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Fuzzer -> Server: YgIABg==
+1502243666:850b666f-da24-4c1f-a416-84474f01b5c1:Server -> Fuzzer: cAIABg==
+
+1502243666:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243666:Reconnecting
+nect
+1502243664:6c43d4a2-b3d4-4aa1-99c6-dcfc60eb611a:Fuzzer -> Server: 4AA=
+1502243664:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243664:Reconnecting
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Connected to server
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Sending valid connect
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Server -> Fuzzer: IAIAAA==
+
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Sending valid subscribe
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Fuzzer -> Server: gggABwADKy8rAg==
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243665:d73a4c42-2977-4ee4-8891-b06cf78405ae:Connected to server
+1502243665:d73a4c42-2977-4ee4-8891-b06cf78405ae:Sending fuzzed connect
+Wed Aug  9 01:54:25 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502243665:d73a4c42-2977-4ee4-8891-b06cf78405ae:Fuzzer -> Server: EBYABE1RVFQEAAAAAApteWNsaWVudCBub3Qg86CBlWRpZW50IG5vdCDzoIGVZGllbnQgbsrzoICuuG90IPOggZVkaXNjb3Qg86CBlWRpc+KA4oEO/v+mjWOggZVkaXPigI1jb25uZWN0ZWQ=
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Sending valid publish
+1502243665:28975ffb-d3fc-4fed-9519-824e8ce7345f:Fuzzer -> Server: Mg8ABlRvcGljQQADcW9zIDE=
+1502243665:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243665:Reconnecting
+1502243665:d73a4c42-2977-4ee4-8891-b06cf78405ae:Server -> Fuzzer: IAIAAA==
+
+1502243665:d73a4c42-2977-4ee4-8891-b06cf78405ae:Sending valid subscribe
+1502243665:d73a4c42-2977-4ee4-8891-b06cf78405ae:Fuzzer -> Server: gggACwADKy8rAg==
+1502243666:d73a4c42-2977-4ee4-8891-b06cf78405ae:Sending valid publish
+1502243666:d73a4c42-2977-4ee4-8891-b06cf78405ae:Fuzzer -> Server: MQ8ACFRvcGljQS9CcW9zIDA=
+1502243666:d73a4c42-2977-4ee4-8891-b06cf78405ae:Sending valid publish-release
+1502243666:d73a4c42-2977-4ee4-8891-b06cf78405ae:Fuzzer -> Server: YgIACQ==
+1502243666:d73a4c42-2977-4ee4-8891-b06cf78405ae:Sending valid publish-received
+1502243666:d73a4c42-2977-4ee4-8891-b06cf78405ae:Fuzzer -> Server: UAIAAg==
+1502243666:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243666:Reconnecting
+-4fc2-a339-bfecfc8d6ca9:Server -> Fuzzer: IAIAAA==
+
+1502243666:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243666:Reconnecting
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Connected to server
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Sending valid connect
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Server -> Fuzzer: IAIAAA==
+
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Sending valid subscribe
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Fuzzer -> Server: gggACwADKy8rAg==
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Server -> Fuzzer: kAMACwIxDwAIVG9waWNBL0Jxb3MgMA==
+
+1502243666:360d26d1-fe90-45d7-921c-50159f5117f7:Sending fuzzed publish
+Wed Aug  9 01:54:26 2017:Generating 500 new fuzz cases for path 'valid-cases/publish'
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Fuzzer -> Server: NCUACFRvcGljQS9DAA1vdmVybGFwcGluZyB0b3BpY0EvQwANb3ZlcmxhcHBpbmcgdHRvcGljIHRvcGljIGZp86CAvWx0ZXLzoICoc2MgZmlsdGVy86CAqHM=
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Server -> Fuzzer: UAIADQ==
+
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Sending valid publish-release
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Fuzzer -> Server: YgIABA==
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Sending valid publish-received
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Fuzzer -> Server: UAIAAg==
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Sending valid disconnect
+1502243667:360d26d1-fe90-45d7-921c-50159f5117f7:Fuzzer -> Server: 4AA=
+1502243667:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243667:Reconnecting
+ valid publish
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Fuzzer -> Server: NA8ABlRvcGljQQAEcW9zIDI=
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Server -> Fuzzer: UAIABA==
+
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Sending fuzzed publish-release
+Wed Aug  9 01:54:28 2017:Generating 500 new fuzz cases for path 'valid-cases/publish-release'
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Fuzzer -> Server: YgKfpPOBAH/zoA4=
+1502243668:941ba0b1-e74c-4491-94fc-5d30432bed8d:Server -> Fuzzer: cAKfpA==
+
+1502243668:Connection to MQTT server lost: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]
+1502243668:Reconnecting

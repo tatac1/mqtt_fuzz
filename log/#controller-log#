@@ -1,0 +1,97 @@
+Cores: 4
+PIDs: [20369, 20370, 20371, 20372]
+Connected; self.fuzzers: {('localhost', 8900): <twisted.spread.pb.RemoteReference instance at 0x103144e60>, ('localhost', 8903): <twisted.spread.pb.RemoteReference instance at 0x103144fc8>, ('localhost', 8901): <twisted.spread.pb.RemoteReference instance at 0x10315e638>, ('localhost', 8902): <twisted.spread.pb.RemoteReference instance at 0x103144a28>}
+Start fuzzing...
+1502342499:Starting fuzz run to localhost:1883
+1502342499:Stopped fuzz run to localhost:1883
+1502342499:324e6a2d-40ae-4c7c-9c75-83ae4f12188c:Connected to server
+1502342499:324e6a2d-40ae-4c7c-9c75-83ae4f12188c:Sending fuzzed connect
+Thu Aug 10 05:21:39 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502342500:324e6a2d-40ae-4c7c-9c75-83ae4f12188c:Fuzzer -> Server: EBYA86CBpwRMUVRUBAIAAAAKbXljbGmQbnRpZA==
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Connected to server
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Sending valid connect
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Server -> Fuzzer: IAIAAA==
+
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Sending valid subscribe
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Server -> Fuzzer: kAMAAgIzDwAGVG9waWNBAAFxb3N/IA==
+
+1502342500:3b01dfdf-dca0-4cf3-a0f6-ae8925f53a62:Sending fuzzed publish
+Thu Aug 10 05:21:40 2017:Generating 500 new fuzz cases for path 'valid-cases/publish'
+1502342499:Starting fuzz run to localhost:1883
+1502342499:Stopped fuzz run to localhost:1883
+1502342499:ca02cf21-596f-4ee6-b5e6-076358a08f98:Connected to server
+1502342499:ca02cf21-596f-4ee6-b5e6-076358a08f98:Sending valid connect
+1502342499:ca02cf21-596f-4ee6-b5e6-076358a08f98:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342499:ca02cf21-596f-4ee6-b5e6-076358a08f98:Server -> Fuzzer: IAIAAA==
+
+1502342500:f8e2d636-5e78-4868-a2c9-1eba49568baa:Connected to server
+1502342500:f8e2d636-5e78-4868-a2c9-1eba49568baa:Sending fuzzed connect
+Thu Aug 10 05:21:40 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+1502342500:f8e2d636-5e78-4868-a2c9-1eba49568baa:Fuzzer -> Server: EBYABE1RVFQEAAAAAAAKbXljbPOggYpqZeGgjm50aWQ=
+1502342500:f8e2d636-5e78-4868-a2c9-1eba49568baa:Server -> Fuzzer: IAIAAg==
+
+1502342501:1a98a5f4-ffc6-47cd-9ae4-e1e278eb3a61:Connected to server
+1502342501:1a98a5f4-ffc6-47cd-9ae4-e1e278eb3a61:Sending valid connect
+1502342501:1a98a5f4-ffc6-47cd-9ae4-e1e278eb3a61:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342501:1a98a5f4-ffc6-47cd-9ae4-e1e278eb3a61:Server -> Fuzzer: IAIAAA==
+
+1502342501:1a98a5f4-ffc6-47cd-9ae4-e1e278eb3a61:Sending fuzzed subscribe
+Thu Aug 10 05:21:41 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502342499:Starting fuzz run to localhost:1883
+1502342499:Stopped fuzz run to localhost:1883
+1502342499:ed45cfa1-e4f9-473a-b455-b91b19ff30b3:Connected to server
+1502342499:ed45cfa1-e4f9-473a-b455-b91b19ff30b3:Sending valid connect
+1502342499:ed45cfa1-e4f9-473a-b455-b91b19ff30b3:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342499:ed45cfa1-e4f9-473a-b455-b91b19ff30b3:Server -> Fuzzer: IAIAAA==
+
+1502342500:c4d45904-5e0f-494a-8b6c-8c61ec4e6304:Connected to server
+1502342500:c4d45904-5e0f-494a-8b6c-8c61ec4e6304:Sending valid connect
+1502342500:c4d45904-5e0f-494a-8b6c-8c61ec4e6304:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342500:c4d45904-5e0f-494a-8b6c-8c61ec4e6304:Server -> Fuzzer: IAIAAA==
+
+1502342500:c4d45904-5e0f-494a-8b6c-8c61ec4e6304:Sending fuzzed subscribe
+Thu Aug 10 05:21:40 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502342500:c4d45904-5e0f-494a-8b6c-8c61ec4e6304:Fuzzer -> Server: ghgADAAIVG9waWPOLyMCAAhUb3BpY0EvKwE=
+1502342501:8b80b6e9-c1b0-4276-8736-0640ad02aaf3:Connected to server
+1502342501:8b80b6e9-c1b0-4276-8736-0640ad02aaf3:Sending fuzzed connect
+Thu Aug 10 05:21:41 2017:Generating 500 new fuzz cases for path 'valid-cases/connect'
+Now I am in_doReadOrWrite's exception section!!!!!!!!!!
+1502342499:Starting fuzz run to localhost:1883
+1502342499:Stopped fuzz run to localhost:1883
+1502342499:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Connected to server
+1502342499:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Sending valid connect
+1502342499:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342499:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Server -> Fuzzer: IAIAAA==
+
+1502342500:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Sending valid subscribe
+1502342500:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Fuzzer -> Server: ggsAAgAGVG9waWNBAg==
+1502342500:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Server -> Fuzzer: kAMAAgIzDwAGVG9waWNBAAFxb3N/IA==
+
+1502342500:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Sending valid publish
+1502342500:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Fuzzer -> Server: MA0ABlRvcGljQXFvcyAw
+1502342500:3e1ed848-13e0-4a5c-b0af-9c025d4fd19b:Server -> Fuzzer: MA0ABlRvcGljQXFvcyAw
+
+1502342500:510a28ce-2b4a-47f8-9009-a487d9781647:Connected to server
+1502342500:510a28ce-2b4a-47f8-9009-a487d9781647:Sending valid connect
+1502342500:510a28ce-2b4a-47f8-9009-a487d9781647:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342500:510a28ce-2b4a-47f8-9009-a487d9781647:Server -> Fuzzer: IAIAAA==
+
+1502342500:510a28ce-2b4a-47f8-9009-a487d9781647:Sending fuzzed subscribe
+Thu Aug 10 05:21:40 2017:Generating 500 new fuzz cases for path 'valid-cases/subscribe'
+1502342501:510a28ce-2b4a-47f8-9009-a487d9781647:Fuzzer -> Server: ggwABQBwaWNBAg==
+1502342501:930414f9-28b8-4004-aa11-2d183cd66bbe:Connected to server
+1502342501:930414f9-28b8-4004-aa11-2d183cd66bbe:Sending valid connect
+1502342501:930414f9-28b8-4004-aa11-2d183cd66bbe:Fuzzer -> Server: EBQAAmhqBAIAAAAKbXljbGllbnRpZA==
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Connected to server
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Sending valid connect
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Fuzzer -> Server: EBYABE1RVFQEAgAAAApteWNsaWVudGlk
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Server -> Fuzzer: IAIAAA==
+
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Sending valid subscribe
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Fuzzer -> Server: gggABwADKy8rAg==
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Server -> Fuzzer: kAMABwIxDwAIVG9waWNBL0Jxb3MgMDURAAhUb3BpY0EvQwABcW9zIDIxDwAJVG9waWNBL/OggYlCcTEPAAhUb3BpY0EvBgAIVDQRMxEACFRvcGljQS/SAAJxb3MgHDEPAAhUb3BpY0EvVG9waWNBMQ8ACFRvcGljQS/jgIBCcW8xDwAIVG9waWNBL+IvQnFvczMKAAVUaWMvQwADCDEPAAhUf3BpY0EvQnFvcyAwMRAABlNvcGljL0MABXFvcyAwMxAAB1RvcGliL0MABHFvcyAyMw8ABlRvcGMvQwAFb3MgMfMxJQAIVG9waeBjQS9DAA1vdmVybGFwcGluZyB0b3BpYyBmaWx0ZXIxDwAIVG8LcGljQS9CcW9zfTMQAAdUb3BpYy9DAAZxb3MgMTMPAAZUb3BpYy8ABwRjL0NjMQsAB1RvcGljLwgAQzMNAARUCC9DAAhzc9NvczMOAAVwaWMvQwAJcyAxQAIxDgAFVG9jL0Nxb3MgMzAxMw4ABVRvcC9wAAogM3A2MzMLAAIvQwALQwAHVG8zEAAHVG5waWMvQwAMcW9zIDAxCgADQS9DMjk2wQAzDQAEY0EvQgANALAAsAAxCgAHVG9waWQvCnAxDwAIVG9wQWNpL0JxbyAyMzMMAAMxL0MADjHzoO+7MxAAB1RvcB5jL0MAD3FvcyAxMRAAB1RvcCpjL0MAAnFvcyAyMxAAB1Rv0HBpYy8AEAVxb3MgMREACFxvcGljQS9DAAZxb3MgMjEPAAhUb3BqY0EvQnFvcyAxMQ8ACFRvBHCMY0EvQnFvcyA=
+
+1502342501:67b5b225-4173-42d9-83f0-3bafc5301908:Sending fuzzed publish
+Thu Aug 10 05:21:41 2017:Generating 500 new fuzz cases for path 'valid-cases/publish'

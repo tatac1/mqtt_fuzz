@@ -31,6 +31,10 @@ import uuid
 import calendar
 import argparse
 import os
+from twisted.spread import pb
+import sys
+from twisted.internet.protocol import ReconnectingClientFactory
+from twisted.internet import defer
 
 class MQTTFuzzProtocol(Protocol):
     '''Implementation of a pseudo-MQTT protocol that conducts predefined MQTT
@@ -88,13 +92,16 @@ class MQTTFuzzProtocol(Protocol):
                 data = self.fuzzdata.get_valid_case(os.path.join(self.validcases_path, pdutype))
             print "%s:%s:Fuzzer -> Server: %s" % (calendar.timegm(time.gmtime()), self.session_id, binascii.b2a_base64(data).rstrip())
             self.transport.write(data)
-        except (IOError, OSError) as err:
-            print "Could not run the fuzzer. Check -validcases and -radamsa options. The error was: %s" % err
+        except (IOError) as err:
+            print "IO Error!!!!! Could not run the fuzzer. Check -validcases and -radamsa options. The error was: %s" % err
+            reactor.stop()
+        except (OSError) as err:
+            print "OS Error!!!!! Could not run the fuzzer. Check -validcases and -radamsa options. The error was: %s" % err
             reactor.stop()
 
-class MQTTClientFactory(ClientFactory):
+class MQTTClientFactory(ReconnectingClientFactory):
     '''Factory that creates pseudo-MQTT clients'''
-
+    maxDelay = 0.1
     protocol = MQTTFuzzProtocol
 
     # These are the sessions that we will be running through.
@@ -129,57 +136,49 @@ class MQTTClientFactory(ClientFactory):
         protocol_instance.validcases_path = self.validcases_path
         return protocol_instance
 
-    def clientConnectionFailed(self, connector, reason):
-        # Callback: The server under test has died
-        from twisted.internet import reactor
+#     def clientConnectionFailed(self, connector, reason):
+#         # Callback: The server under test has died
+#         from twisted.internet import reactor
+#         print "clientConnectionFailed"
+#         print "%s:Failed to connect to MQTT server: %s" % (calendar.timegm(time.gmtime()), reason)
+#         ReconnectingClientFactory.clientConnectionFailed(self,connector,reason)
 
-        print "%s:Failed to connect to MQTT server: %s" % (calendar.timegm(time.gmtime()), reason)
-        reactor.stop()
+#     def clientConnectionLost(self, connector, reason):
+#         # Callback: The server under test closed connection or we decided to
+#         # tear down the connection at the end of a session. We'll
+#         # reconnect (which starts another session in the protocol
+#         # instance)
+#         print "%s:Connection to MQTT server lost: %s" % (calendar.timegm(time.gmtime()), reason)
+#         print "%s:Reconnecting" % calendar.timegm(time.gmtime())
+#         ReconnectingClientFactory.clientConnectionLost(self, connector, reason)
+# #        defer.DeferredList([reconnection], consumeErrors=True).addCallbacks(self.ReconnectionDone,self.ReconnectionFailed)
 
-    def clientConnectionLost(self, connector, reason):
-        # Callback: The server under test closed connection or we decided to
-        # tear down the connection at the end of a session. We'll
-        # reconnect (which starts another session in the protocol
-        # instance)
-        print "%s:Connection to MQTT server lost: %s" % (calendar.timegm(time.gmtime()), reason)
-        print "%s:Reconnecting" % calendar.timegm(time.gmtime())
-        connector.connect()
+    def reconennctionDone(self, results):
+        print "Reconnection Done!!!!!!!!"
 
-def run_tests(host, port, ratio, delay, radamsa, validcases):  # pylint: disable=R0913
-    '''Main function to run'''
-    from twisted.internet import reactor
+    def reconnectionFailed(self, results):
+        print "Reconnection Failed!!!!!!!!!!"
+class PBServer(pb.Root):
+    def __init__(self,port):
+        self.id = port
+        self.remote_run_tests()
 
-    factory = MQTTClientFactory(ratio, delay, radamsa, validcases)
-    hostname = host
-    port = int(port)
-    print "%s:Starting fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
-#    reactor.connectTCP(hostname, port, factory)
-    reactor.connectTCP(hostname, port, factory)
-    reactor.run()
-    print "%s:Stopped fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
+    def __str__(self): # String representation
+        return "PBServer %s" % self.id
 
-# The following is the entry point from command line
+    def remote_initialize(self, initArg):
+        return "%s initialized" % self
+        
+    def remote_run_tests(self, host="localhost", port=1883, ratio=3, delay=50, radamsa="radamsa", validcases="valid-cases/"):
+        '''Main function to run'''
+        hostname = host
+        port = int(port)
+        print "%s:Starting fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
+        reactor.connectTCP(hostname, port, MQTTClientFactory(ratio, delay, radamsa, validcases))
+        print "%s:Stopped fuzz run to %s:%s" % (calendar.timegm(time.gmtime()), hostname, port)
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='MQTT-fuzz, a simple MQTT protocol fuzzer.')
-    parser.add_argument('host', metavar='target_host',
-                        type=str,
-                        default='localhost',
-                        help='Host name of MQTT server / broker under test')
-    parser.add_argument('port', metavar='target_port',
-                        type=int,
-                        default=1883,
-                        help='Port number of MQTT server / broker under test')
-    parser.add_argument('-ratio', metavar='fuzz_ratio',
-                        type=int, required=False, choices=range(0, 11),
-                        default=3, help='How many control packets should be fuzzed per 10 packets sent (0 = fuzz nothing, 10 = fuzz all packets, default is 3)')
-    parser.add_argument('-delay', metavar='send_delay',
-                        type=int, required=False,
-                        default=50, help='How many milliseconds to wait between control packets sent, default is 50 ms')
-    parser.add_argument('-validcases', metavar='validcase_path',
-                        type=str, required=False,
-                        default='valid-cases/', help='Path to the valid-case directories, default is "valid-cases/"')
-    parser.add_argument('-fuzzer', metavar='fuzzer_path', type=str,
-                        default='radamsa', required=False,
-                        help='Path and name of the Radamsa binary, default "radamsa"')
-    args = parser.parse_args()
-    run_tests(args.host, args.port, args.ratio, args.delay, args.fuzzer, args.validcases)
+    from twisted.internet import reactor
+    port = sys.argv[1]
+    reactor.listenTCP(int(port), pb.PBServerFactory(PBServer(port)))
+    reactor.run()
