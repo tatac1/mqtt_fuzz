@@ -1,8 +1,3 @@
-"""
-Controller.py
-Starts and manages solvers in separate processses for parallel processing.
-Provides an interface to the Flex UI.
-"""
 startPort=8900
 FlexControlPanelPort=8050
 import os, sys

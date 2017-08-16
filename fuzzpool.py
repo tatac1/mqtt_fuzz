@@ -12,6 +12,7 @@
 # implied.  See the License for the specific language governing
 # permissions and limitations under the License.
 
+# Modified by Yuji Tabata
 
 import tempfile
 import os
@@ -19,7 +20,7 @@ import subprocess
 import shutil
 import time
 import itertools
-
+from glob import glob
 
 class FuzzPool:
     '''A generic fuzzed string provider. Provide a directory of valid
@@ -86,7 +87,7 @@ class FuzzPool:
         try:
             subprocess.check_call(
                 [radamsacmd, "-o", os.path.join(fuzz_case_directory, "%n.fuzz"), "-n",
-                 str(no_of_fuzzcases), "-r", valid_case_directory])
+                 str(no_of_fuzzcases)] + glob(valid_case_directory + "/*"))
         except subprocess.CalledProcessError as error:
             raise error
 

@@ -15,6 +15,8 @@
 # implied.  See the License for the specific language governing
 # permissions and limitations under the License.
 
+# Modified by Yuji Tabata(uztbt)
+
 """mqtt_fuzz.py
 
 Performs MQTT sessions as a client with a fuzzed PDU once in a while.
@@ -101,7 +103,7 @@ class MQTTFuzzProtocol(Protocol):
 
 class MQTTClientFactory(ReconnectingClientFactory):
     '''Factory that creates pseudo-MQTT clients'''
-    maxDelay = 0.1
+    maxDelay = 0.05
     protocol = MQTTFuzzProtocol
 
     # These are the sessions that we will be running through.
